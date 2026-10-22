@@ -1,0 +1,6 @@
+{
+  "name": "Maison Hermance - Elegancia y Fragancias",
+  "description": "Boutique de perfumes y bolsos de lujo para el mercado europeo. Elegancia y Fragancias.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,3912 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maison Hermance — Elegancia y Fragancias</title>
+  <meta name="description" content="Boutique de perfumes y bolsos de lujo para el mercado europeo. Elegancia y Fragancias." />
+  <meta property="og:title" content="Maison Hermance — Elegancia y Fragancias" />
+  <meta property="og:description" content="Perfumes y bolsos seleccionados con cuidado. Envío a toda Europa." />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts: Playfair Display & Jost -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ==========================================================
+       VARIABLES CSS CONFIGURABLES
+       ========================================================== */
+    :root {
+      --bg-cream: #FBF6EE;
+      --bg-cream-alt: #F3EBDD;
+      --bg-photo: #EEE6D6;
+      --text-main: #1E1B16;
+      --text-muted: #6E685E;
+      --olive: #5F6B2E;
+      --olive-dark: #4A5524;
+      --olive-light: #7A893D;
+      --olive-subtle: rgba(95, 107, 46, 0.12);
+      --terracotta: #C2542D;
+      --white: #FFFFFF;
+      --border-subtle: rgba(95, 107, 46, 0.18);
+      --border-light: rgba(30, 27, 22, 0.08);
+
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans: 'Jost', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+      --radius-arch: 999px 999px 14px 14px;
+      --radius-oval: 999px;
+      --radius-pill: 999px;
+      --radius-card: 18px;
+
+      --shadow-sm: 0 4px 16px rgba(30, 27, 22, 0.04);
+      --shadow-md: 0 10px 30px rgba(30, 27, 22, 0.07);
+      --shadow-lg: 0 18px 45px rgba(30, 27, 22, 0.12);
+
+      --ease-luxury: cubic-bezier(.22, .61, .36, 1);
+      --transition-fast: 250ms var(--ease-luxury);
+      --transition-normal: 400ms var(--ease-luxury);
+    }
+
+    /* Reset & Base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      background-color: var(--bg-cream);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      font-size: 16px;
+      line-height: 1.6;
+      overflow-x: hidden;
+      selection-background-color: var(--olive);
+      selection-color: var(--bg-cream);
+    }
+
+    ::selection {
+      background: var(--olive);
+      color: var(--bg-cream);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color var(--transition-fast);
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+      outline: none;
+    }
+
+    button:focus-visible, a:focus-visible, input:focus-visible {
+      outline: 2px solid var(--olive);
+      outline-offset: 3px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Typo Utilities */
+    .font-serif {
+      font-family: var(--font-serif);
+    }
+
+    .section-eyebrow {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.28em;
+      color: var(--olive);
+      font-weight: 600;
+      display: block;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2.2rem, 4vw, 3.4rem);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--text-main);
+      letter-spacing: -0.01em;
+    }
+
+    .section-intro {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 3.5rem auto;
+    }
+
+    .section-separator {
+      width: 48px;
+      height: 1px;
+      background: var(--olive);
+      margin: 1.25rem auto 0 auto;
+      opacity: 0.4;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      padding: 0.85rem 2rem;
+      border-radius: var(--radius-pill);
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      transition: transform var(--transition-fast), background-color var(--transition-fast), color var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn:active {
+      transform: translateY(1px);
+    }
+
+    .btn-olive {
+      background-color: var(--olive);
+      color: var(--bg-cream);
+      box-shadow: 0 6px 18px rgba(95, 107, 46, 0.22);
+    }
+
+    .btn-olive:hover {
+      background-color: var(--olive-dark);
+      box-shadow: 0 8px 22px rgba(95, 107, 46, 0.32);
+    }
+
+    .btn-outline-olive {
+      background-color: transparent;
+      color: var(--olive);
+      border: 1px solid var(--olive);
+    }
+
+    .btn-outline-olive:hover {
+      background-color: var(--olive-subtle);
+      border-color: var(--olive-dark);
+      color: var(--olive-dark);
+    }
+
+    /* 8-Branch Olive Star */
+    .star-8 {
+      width: 24px;
+      height: 24px;
+      animation: spinStar 28s linear infinite;
+      transform-origin: center;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    @keyframes spinStar {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    /* ==========================================================
+       1. EN-TÊTE FIXE
+       ========================================================== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: var(--bg-cream);
+      z-index: 80;
+      transition: padding var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .site-header.scrolled {
+      padding: 0;
+      box-shadow: var(--shadow-sm);
+      background-color: rgba(251, 246, 238, 0.96);
+      backdrop-filter: blur(8px);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 84px;
+      transition: height var(--transition-fast);
+    }
+
+    .site-header.scrolled .header-inner {
+      height: 70px;
+    }
+
+    /* Logo */
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .logo-monogram {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1.5px solid var(--olive);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--olive);
+      background: transparent;
+      transition: transform var(--transition-fast), background var(--transition-fast), color var(--transition-fast);
+    }
+
+    .brand-logo:hover .logo-monogram {
+      transform: scale(1.05);
+      background: var(--olive);
+      color: var(--bg-cream);
+    }
+
+    .brand-title {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--text-main);
+      letter-spacing: -0.01em;
+      white-space: nowrap;
+    }
+
+    /* Menu Navigation */
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 2.2rem;
+      list-style: none;
+    }
+
+    .nav-link {
+      font-size: 0.88rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--text-main);
+      font-weight: 500;
+      position: relative;
+      padding: 0.35rem 0;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1.5px;
+      background-color: var(--olive);
+      transition: width var(--transition-fast);
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+
+    .nav-link.active {
+      color: var(--olive);
+    }
+
+    /* Header Actions */
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 1.6rem;
+    }
+
+    .lang-switcher {
+      display: flex;
+      align-items: center;
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .lang-btn {
+      padding: 0.2rem 0.35rem;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: color var(--transition-fast);
+    }
+
+    .lang-btn.active {
+      color: var(--olive);
+      font-weight: 700;
+      border-bottom: 1.5px solid var(--olive);
+    }
+
+    .lang-divider {
+      color: var(--border-subtle);
+      margin: 0 0.15rem;
+      user-select: none;
+    }
+
+    .cart-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--text-main);
+      font-weight: 600;
+      cursor: pointer;
+      position: relative;
+      padding: 0.4rem 0.75rem;
+      border-radius: var(--radius-pill);
+      border: 1px solid transparent;
+      transition: border-color var(--transition-fast), transform var(--transition-fast);
+    }
+
+    .cart-btn:hover {
+      border-color: var(--border-subtle);
+    }
+
+    .cart-count-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--olive);
+      font-weight: 700;
+    }
+
+    .cart-btn.bounce {
+      animation: cartBounce 400ms var(--ease-luxury);
+    }
+
+    @keyframes cartBounce {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.18); }
+    }
+
+    .burger-btn {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 36px;
+      height: 36px;
+      cursor: pointer;
+      z-index: 100;
+    }
+
+    .burger-line {
+      width: 24px;
+      height: 2px;
+      background-color: var(--text-main);
+      transition: transform var(--transition-fast), opacity var(--transition-fast);
+      margin: 0 auto;
+    }
+
+    .burger-btn.active .burger-line:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+    .burger-btn.active .burger-line:nth-child(2) {
+      opacity: 0;
+    }
+    .burger-btn.active .burger-line:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* Mobile Nav Drawer */
+    .mobile-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: var(--bg-cream);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      z-index: 75;
+      transform: translateY(-100%);
+      transition: transform var(--transition-normal);
+      padding: 2rem;
+    }
+
+    .mobile-nav.open {
+      transform: translateY(0);
+    }
+
+    .mobile-nav-link {
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      color: var(--text-main);
+      font-weight: 600;
+      transition: color var(--transition-fast);
+    }
+
+    .mobile-nav-link:hover, .mobile-nav-link.active {
+      color: var(--olive);
+    }
+
+    /* ==========================================================
+       2. HERO SECTION
+       ========================================================== */
+    .hero-section {
+      padding: 4.5rem 0 6rem 0;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .hero-left {
+      max-width: 580px;
+    }
+
+    /* Mini arch above title */
+    .hero-mini-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.85rem;
+      background: var(--bg-cream-alt);
+      padding: 0.35rem 0.95rem 0.35rem 0.45rem;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border-subtle);
+      margin-bottom: 2rem;
+    }
+
+    .mini-bag-arch {
+      width: 32px;
+      height: 38px;
+      border-radius: var(--radius-arch);
+      background: var(--olive);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mini-bag-arch img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-mini-text {
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: var(--olive);
+      font-weight: 600;
+    }
+
+    .hero-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2.8rem, 5.5vw, 4.4rem);
+      font-weight: 800;
+      line-height: 1.08;
+      color: var(--text-main);
+      letter-spacing: -0.02em;
+      margin-bottom: 1.6rem;
+    }
+
+    .hero-description {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      font-weight: 400;
+      line-height: 1.65;
+      margin-bottom: 2.4rem;
+      max-width: 480px;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.6rem;
+      margin-bottom: 2.2rem;
+    }
+
+    .hero-social-links {
+      display: flex;
+      align-items: center;
+      gap: 1.4rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      color: var(--olive);
+      text-transform: uppercase;
+    }
+
+    .hero-social-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      position: relative;
+    }
+
+    .hero-social-link:hover {
+      color: var(--olive-dark);
+      transform: translateX(2px);
+    }
+
+    /* Hero Right - Arch Oval & Backdrop */
+    .hero-right {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem 0;
+    }
+
+    .hero-arch-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 440px;
+    }
+
+    /* Decentered Olive Arch Backdrop */
+    .hero-arch-backdrop {
+      position: absolute;
+      top: -18px;
+      right: -18px;
+      width: 100%;
+      height: 100%;
+      background-color: var(--olive);
+      border-radius: var(--radius-arch);
+      z-index: 1;
+      opacity: 0.95;
+      transition: transform var(--transition-normal);
+    }
+
+    .hero-arch-main {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      border-radius: var(--radius-arch);
+      background-color: var(--bg-photo);
+      overflow: hidden;
+      z-index: 2;
+      box-shadow: var(--shadow-lg);
+      border: 3px solid var(--white);
+    }
+
+    .hero-arch-main img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 1.2s var(--ease-luxury);
+    }
+
+    .hero-arch-main:hover img {
+      transform: scale(1.05);
+    }
+
+    /* 8-Branch Star on top left of arch */
+    .hero-star-decor {
+      position: absolute;
+      top: -24px;
+      left: -20px;
+      z-index: 5;
+      background: var(--white);
+      padding: 8px;
+      border-radius: 50%;
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Floating Card overlapping arch */
+    .hero-floating-card {
+      position: absolute;
+      bottom: 24px;
+      left: -32px;
+      background: var(--white);
+      border-radius: 18px;
+      padding: 0.9rem 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      box-shadow: var(--shadow-md);
+      z-index: 6;
+      border: 1px solid var(--border-light);
+      animation: floatCard 4.5s ease-in-out infinite;
+    }
+
+    @keyframes floatCard {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-7px); }
+    }
+
+    .floating-thumb {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--bg-photo);
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .floating-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .floating-meta h4 {
+      font-family: var(--font-serif);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 0.15rem;
+      white-space: nowrap;
+    }
+
+    .floating-meta .price {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--olive);
+    }
+
+    .stars-terracotta {
+      color: var(--terracotta);
+      font-size: 0.78rem;
+      letter-spacing: 1px;
+      display: inline-block;
+      margin-left: 0.35rem;
+    }
+
+    /* ==========================================================
+       3. COLLECTIONS (« Dos universos »)
+       ========================================================== */
+    .collections-section {
+      padding: 5.5rem 0 6.5rem 0;
+      background-color: var(--bg-cream);
+    }
+
+    .collections-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+    }
+
+    .collection-card {
+      position: relative;
+      display: block;
+      cursor: pointer;
+      text-decoration: none;
+      color: var(--text-main);
+    }
+
+    .collection-arch {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4 / 3.6;
+      border-radius: var(--radius-arch);
+      background-color: var(--bg-photo);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow var(--transition-normal);
+      border: 1px solid var(--border-subtle);
+    }
+
+    .collection-arch img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.9s var(--ease-luxury);
+    }
+
+    .collection-card:hover .collection-arch img {
+      transform: scale(1.06);
+    }
+
+    .collection-card:hover .collection-arch {
+      box-shadow: var(--shadow-md);
+    }
+
+    .collection-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(30, 27, 22, 0.05) 0%, rgba(30, 27, 22, 0.45) 100%);
+      pointer-events: none;
+    }
+
+    .collection-content {
+      position: absolute;
+      bottom: 2rem;
+      left: 2rem;
+      right: 2rem;
+      color: var(--bg-cream);
+      z-index: 2;
+    }
+
+    .collection-content h3 {
+      font-family: var(--font-serif);
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+      color: var(--white);
+    }
+
+    .collection-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-weight: 600;
+      color: var(--bg-cream);
+      border-bottom: 1.5px solid var(--bg-cream);
+      padding-bottom: 0.2rem;
+      transition: color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+    }
+
+    .collection-card:hover .collection-cta {
+      transform: translateX(4px);
+      color: var(--white);
+      border-color: var(--white);
+    }
+
+    /* ==========================================================
+       4. QUIZ SECTION (FOND #F3EBDD)
+       ========================================================== */
+    .quiz-section {
+      padding: 6rem 0;
+      background-color: var(--bg-cream-alt);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .quiz-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 4.5rem;
+      align-items: center;
+    }
+
+    .quiz-left h2 {
+      margin-bottom: 1.4rem;
+    }
+
+    .quiz-left p {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-bottom: 2.2rem;
+      line-height: 1.6;
+    }
+
+    /* Quiz Card Olive */
+    .quiz-card {
+      background-color: var(--olive);
+      color: var(--bg-cream);
+      border-radius: 28px;
+      padding: 2.8rem 2.4rem;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .quiz-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.2rem;
+      border-bottom: 1px solid rgba(251, 246, 238, 0.2);
+    }
+
+    .quiz-step-indicator {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-weight: 600;
+      color: var(--bg-cream);
+      opacity: 0.9;
+    }
+
+    .quiz-progress-track {
+      width: 140px;
+      height: 4px;
+      background: rgba(251, 246, 238, 0.2);
+      border-radius: var(--radius-pill);
+      overflow: hidden;
+    }
+
+    .quiz-progress-bar {
+      height: 100%;
+      background: var(--bg-cream);
+      border-radius: var(--radius-pill);
+      transition: width var(--transition-normal);
+    }
+
+    .quiz-question-title {
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+      color: var(--white);
+    }
+
+    .quiz-question-desc {
+      font-size: 0.92rem;
+      opacity: 0.8;
+      margin-bottom: 1.8rem;
+    }
+
+    .quiz-options-list {
+      display: grid;
+      gap: 0.85rem;
+      margin-bottom: 2rem;
+    }
+
+    .quiz-option-btn {
+      width: 100%;
+      padding: 1rem 1.4rem;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(251, 246, 238, 0.35);
+      background: rgba(251, 246, 238, 0.08);
+      color: var(--white);
+      text-align: left;
+      font-size: 0.95rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all var(--transition-fast);
+      cursor: pointer;
+    }
+
+    .quiz-option-btn:hover {
+      background: var(--bg-cream);
+      color: var(--olive-dark);
+      border-color: var(--bg-cream);
+      transform: translateX(4px);
+    }
+
+    .quiz-nav-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 1.2rem;
+      border-top: 1px solid rgba(251, 246, 238, 0.15);
+      font-size: 0.85rem;
+    }
+
+    .quiz-back-btn {
+      color: var(--bg-cream);
+      opacity: 0.75;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      transition: opacity var(--transition-fast);
+    }
+
+    .quiz-back-btn:hover {
+      opacity: 1;
+    }
+
+    /* Quiz Results */
+    .quiz-results-container {
+      display: none;
+    }
+
+    .quiz-results-container.active {
+      display: block;
+      animation: fadeIn var(--transition-normal);
+    }
+
+    .quiz-recs-grid {
+      display: grid;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .quiz-rec-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: rgba(251, 246, 238, 0.12);
+      border-radius: 14px;
+      padding: 0.75rem 1rem;
+      border: 1px solid rgba(251, 246, 238, 0.2);
+    }
+
+    .quiz-rec-thumb {
+      width: 50px;
+      height: 50px;
+      border-radius: 8px;
+      background: var(--bg-photo);
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .quiz-rec-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .quiz-rec-meta {
+      flex: 1;
+    }
+
+    .quiz-rec-meta h5 {
+      font-family: var(--font-serif);
+      font-size: 0.95rem;
+      color: var(--white);
+      margin-bottom: 0.15rem;
+    }
+
+    .quiz-rec-meta span {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--bg-cream);
+    }
+
+    .quiz-email-form {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 1.2rem;
+    }
+
+    .quiz-email-input {
+      flex: 1;
+      padding: 0.75rem 1rem;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(251, 246, 238, 0.4);
+      background: rgba(251, 246, 238, 0.1);
+      color: var(--white);
+      font-size: 0.88rem;
+    }
+
+    .quiz-email-input::placeholder {
+      color: rgba(251, 246, 238, 0.5);
+    }
+
+    .quiz-email-input:focus {
+      outline: none;
+      border-color: var(--white);
+      background: rgba(251, 246, 238, 0.2);
+    }
+
+    .quiz-confirm-msg {
+      background: rgba(251, 246, 238, 0.15);
+      padding: 0.75rem 1rem;
+      border-radius: 12px;
+      font-size: 0.85rem;
+      text-align: center;
+      color: var(--white);
+      margin-top: 1rem;
+      display: none;
+    }
+
+    /* ==========================================================
+       5. FAVORIS (« Nuestros favoritos »)
+       ========================================================== */
+    .favorites-section {
+      padding: 6rem 0;
+      background-color: var(--bg-cream);
+    }
+
+    /* Filter Pills */
+    .filters-wrap {
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .filter-btn {
+      padding: 0.55rem 1.6rem;
+      border-radius: var(--radius-pill);
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-weight: 600;
+      border: 1px solid var(--border-subtle);
+      color: var(--text-main);
+      background: transparent;
+      transition: all var(--transition-fast);
+      cursor: pointer;
+    }
+
+    .filter-btn:hover {
+      border-color: var(--olive);
+      color: var(--olive);
+    }
+
+    .filter-btn.active {
+      background: var(--olive);
+      color: var(--bg-cream);
+      border-color: var(--olive);
+      box-shadow: 0 4px 14px rgba(95, 107, 46, 0.2);
+    }
+
+    /* Products Grid */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2.2rem;
+    }
+
+    .product-card {
+      background: var(--white);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+      cursor: pointer;
+      position: relative;
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+    }
+
+    /* Product Photo Arch */
+    .product-photo-arch {
+      position: relative;
+      width: calc(100% - 1.6rem);
+      margin: 0.8rem auto 0 auto;
+      aspect-ratio: 1 / 1.08;
+      border-radius: var(--radius-arch);
+      background-color: var(--bg-photo);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .product-photo-arch img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s var(--ease-luxury);
+    }
+
+    .product-card:hover .product-photo-arch img {
+      transform: scale(1.06);
+    }
+
+    /* Badges */
+    .product-badge-corner {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: var(--olive);
+      color: var(--bg-cream);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-weight: 700;
+      padding: 0.35rem 0.75rem;
+      border-radius: var(--radius-pill);
+      z-index: 2;
+    }
+
+    .product-badge-corner.terracotta {
+      background-color: var(--terracotta);
+      color: var(--white);
+    }
+
+    .product-discount-pill {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: var(--terracotta);
+      color: var(--white);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      padding: 0.3rem 0.65rem;
+      border-radius: var(--radius-pill);
+      z-index: 2;
+    }
+
+    /* Card Details */
+    .product-details {
+      padding: 1.4rem 1.4rem 1.6rem 1.4rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: space-between;
+    }
+
+    .product-reviews-row {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .product-reviews-count {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .product-name {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.3;
+      margin-bottom: 0.75rem;
+      transition: color var(--transition-fast);
+    }
+
+    .product-card:hover .product-name {
+      color: var(--olive);
+    }
+
+    .product-pricing-row {
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .old-price {
+      font-size: 0.88rem;
+      color: #9E9689;
+      text-decoration: line-through;
+    }
+
+    .current-price {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .current-price.sale {
+      color: var(--olive-dark);
+    }
+
+    .btn-add-cart {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border-radius: var(--radius-pill);
+      background-color: transparent;
+      color: var(--olive);
+      border: 1px solid var(--olive);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-weight: 600;
+      transition: all var(--transition-fast);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+    }
+
+    .btn-add-cart:hover {
+      background-color: var(--olive);
+      color: var(--bg-cream);
+    }
+
+    /* ==========================================================
+       6. AVIS CLIENTS (« Opiniones de nuestros clientes »)
+       ========================================================== */
+    .reviews-section {
+      padding: 6rem 0;
+      background-color: var(--bg-cream);
+      overflow: hidden;
+    }
+
+    .carousel-container {
+      position: relative;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .carousel-track-wrapper {
+      overflow: hidden;
+      padding: 1rem 0 2rem 0;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform var(--transition-normal);
+      gap: 1.8rem;
+    }
+
+    .review-card {
+      min-width: calc(33.333% - 1.2rem);
+      background: var(--white);
+      border-radius: 20px;
+      padding: 2.2rem 1.8rem;
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    }
+
+    .review-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .review-quote {
+      font-size: 0.98rem;
+      color: var(--text-main);
+      font-style: italic;
+      line-height: 1.6;
+      margin: 1rem 0 1.6rem 0;
+    }
+
+    .review-author {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border-light);
+    }
+
+    .author-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--bg-photo);
+      overflow: hidden;
+      border: 1.5px solid var(--olive-subtle);
+    }
+
+    .author-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .author-meta h5 {
+      font-family: var(--font-serif);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .author-meta span {
+      font-size: 0.78rem;
+      color: var(--olive);
+      font-weight: 500;
+    }
+
+    /* Carousel Controls */
+    .carousel-controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .carousel-arrow {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid var(--olive);
+      color: var(--olive);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+
+    .carousel-arrow:hover {
+      background: var(--olive);
+      color: var(--bg-cream);
+    }
+
+    .carousel-dots {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .carousel-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--border-subtle);
+      transition: all var(--transition-fast);
+      cursor: pointer;
+    }
+
+    .carousel-dot.active {
+      background: var(--olive);
+      width: 26px;
+      border-radius: var(--radius-pill);
+    }
+
+    /* ==========================================================
+       7. GUIDES (« Guías para elegir bien » - FOND #F3EBDD)
+       ========================================================== */
+    .guides-section {
+      padding: 6rem 0;
+      background-color: var(--bg-cream-alt);
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .guides-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.2rem;
+    }
+
+    .guide-card {
+      background: var(--white);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .guide-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .guide-arch {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      border-radius: var(--radius-arch);
+      background: var(--bg-photo);
+      overflow: hidden;
+    }
+
+    .guide-arch img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s var(--ease-luxury);
+    }
+
+    .guide-card:hover .guide-arch img {
+      transform: scale(1.06);
+    }
+
+    .guide-body {
+      padding: 1.6rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: space-between;
+    }
+
+    .guide-body h4 {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 0.8rem;
+      line-height: 1.25;
+      transition: color var(--transition-fast);
+    }
+
+    .guide-card:hover .guide-body h4 {
+      color: var(--olive);
+    }
+
+    .guide-link {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-weight: 600;
+      color: var(--olive);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      border-bottom: 1px solid transparent;
+      transition: gap var(--transition-fast), border-color var(--transition-fast);
+      align-self: flex-start;
+      margin-top: 1rem;
+    }
+
+    .guide-card:hover .guide-link {
+      gap: 0.7rem;
+      border-color: var(--olive);
+    }
+
+    /* ==========================================================
+       8. TIKTOK SECTION
+       ========================================================== */
+    .tiktok-section {
+      padding: 6rem 0;
+      background-color: var(--bg-cream);
+    }
+
+    .tiktok-header-row {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 3.5rem;
+    }
+
+    .tiktok-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.6rem;
+    }
+
+    .tiktok-card {
+      position: relative;
+      aspect-ratio: 9 / 16;
+      border-radius: 20px;
+      overflow: hidden;
+      background: var(--bg-photo);
+      box-shadow: var(--shadow-sm);
+      display: block;
+      cursor: pointer;
+    }
+
+    .tiktok-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s var(--ease-luxury);
+    }
+
+    .tiktok-card:hover img {
+      transform: scale(1.08);
+    }
+
+    .tiktok-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(30, 27, 22, 0.1) 0%, rgba(30, 27, 22, 0.65) 100%);
+      transition: background var(--transition-fast);
+    }
+
+    .tiktok-play-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.9);
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(251, 246, 238, 0.85);
+      color: var(--olive);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-sm);
+      transition: all var(--transition-fast);
+    }
+
+    .tiktok-card:hover .tiktok-play-icon {
+      transform: translate(-50%, -50%) scale(1.1);
+      background: var(--white);
+    }
+
+    .tiktok-meta {
+      position: absolute;
+      bottom: 1.2rem;
+      left: 1.2rem;
+      right: 1.2rem;
+      color: var(--white);
+      z-index: 2;
+    }
+
+    .tiktok-meta p {
+      font-size: 0.85rem;
+      font-weight: 500;
+      line-height: 1.35;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+    }
+
+    /* ==========================================================
+       9. PIED DE PAGE (FOND OLIVE #5F6B2E, TEXTE CRÈME)
+       ========================================================== */
+    .site-footer {
+      background-color: var(--olive);
+      color: var(--bg-cream);
+      padding: 5.5rem 0 3rem 0;
+      border-top: 1px solid var(--olive-dark);
+    }
+
+    .newsletter-banner {
+      max-width: 620px;
+      margin: 0 auto 5rem auto;
+      text-align: center;
+    }
+
+    .newsletter-banner h3 {
+      font-family: var(--font-serif);
+      font-size: 2.2rem;
+      color: var(--white);
+      margin-bottom: 0.75rem;
+    }
+
+    .newsletter-banner p {
+      font-size: 0.95rem;
+      opacity: 0.88;
+      margin-bottom: 1.8rem;
+    }
+
+    .newsletter-form {
+      display: flex;
+      gap: 0.6rem;
+      max-width: 460px;
+      margin: 0 auto;
+    }
+
+    .newsletter-input {
+      flex: 1;
+      padding: 0.85rem 1.4rem;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(251, 246, 238, 0.4);
+      background: rgba(251, 246, 238, 0.12);
+      color: var(--white);
+      font-size: 0.9rem;
+    }
+
+    .newsletter-input::placeholder {
+      color: rgba(251, 246, 238, 0.6);
+    }
+
+    .newsletter-input:focus {
+      outline: none;
+      background: rgba(251, 246, 238, 0.22);
+      border-color: var(--white);
+    }
+
+    .btn-newsletter {
+      background: var(--bg-cream);
+      color: var(--olive-dark);
+      border: none;
+      font-weight: 700;
+    }
+
+    .btn-newsletter:hover {
+      background: var(--white);
+      color: var(--olive-dark);
+    }
+
+    .newsletter-feedback {
+      margin-top: 0.85rem;
+      font-size: 0.85rem;
+      color: var(--bg-cream);
+      display: none;
+    }
+
+    /* 4 Footer Columns */
+    .footer-columns-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 3rem;
+      padding-bottom: 4rem;
+      border-bottom: 1px solid rgba(251, 246, 238, 0.2);
+      margin-bottom: 3rem;
+    }
+
+    .footer-col h5 {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 1.4rem;
+      letter-spacing: 0.02em;
+    }
+
+    .footer-links-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .footer-link {
+      font-size: 0.88rem;
+      color: var(--bg-cream);
+      opacity: 0.85;
+      transition: opacity var(--transition-fast), transform var(--transition-fast);
+      display: inline-block;
+    }
+
+    .footer-link:hover {
+      opacity: 1;
+      transform: translateX(3px);
+    }
+
+    /* Payment & Final line */
+    .footer-bottom-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      font-size: 0.85rem;
+      opacity: 0.85;
+    }
+
+    .payment-badges-row {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .payment-badge {
+      background: rgba(251, 246, 238, 0.15);
+      border: 1px solid rgba(251, 246, 238, 0.25);
+      border-radius: 6px;
+      padding: 0.35rem 0.75rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: var(--white);
+    }
+
+    /* ==========================================================
+       10. MINI-PANIER (Tiroir Latéral)
+       ========================================================== */
+    .cart-drawer-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(30, 27, 22, 0.55);
+      backdrop-filter: blur(4px);
+      z-index: 120;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity var(--transition-normal);
+    }
+
+    .cart-drawer-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .cart-drawer {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      max-width: 440px;
+      height: 100vh;
+      background: var(--bg-cream);
+      z-index: 125;
+      box-shadow: -10px 0 40px rgba(30, 27, 22, 0.15);
+      transform: translateX(100%);
+      transition: transform var(--transition-normal);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cart-drawer.active {
+      transform: translateX(0);
+    }
+
+    .cart-drawer-header {
+      padding: 1.5rem 1.8rem;
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .cart-drawer-header h3 {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .cart-close-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      color: var(--text-main);
+      cursor: pointer;
+      transition: background var(--transition-fast);
+    }
+
+    .cart-close-btn:hover {
+      background: var(--bg-cream-alt);
+    }
+
+    .cart-items-list {
+      flex: 1;
+      overflow-y: auto;
+      padding: 1.5rem 1.8rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .cart-empty-state {
+      text-align: center;
+      margin: auto 0;
+      padding: 2rem 0;
+      color: var(--text-muted);
+    }
+
+    .cart-empty-state p {
+      font-size: 1.05rem;
+      margin-bottom: 1rem;
+    }
+
+    .cart-item-row {
+      display: flex;
+      gap: 1rem;
+      background: var(--white);
+      border: 1px solid var(--border-light);
+      border-radius: 14px;
+      padding: 0.85rem;
+      align-items: center;
+    }
+
+    .cart-item-thumb {
+      width: 64px;
+      height: 64px;
+      border-radius: 10px;
+      background: var(--bg-photo);
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .cart-item-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .cart-item-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .cart-item-info h5 {
+      font-family: var(--font-serif);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-main);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-bottom: 0.2rem;
+    }
+
+    .cart-item-price {
+      font-size: 0.88rem;
+      color: var(--olive);
+      font-weight: 600;
+    }
+
+    .cart-qty-ctrls {
+      display: flex;
+      align-items: center;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-pill);
+      padding: 0.15rem 0.4rem;
+      gap: 0.5rem;
+    }
+
+    .qty-btn {
+      width: 22px;
+      height: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      color: var(--text-main);
+      cursor: pointer;
+    }
+
+    .qty-value {
+      font-size: 0.85rem;
+      font-weight: 600;
+      min-width: 16px;
+      text-align: center;
+    }
+
+    .cart-remove-item {
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 0.8rem;
+      padding: 0.3rem;
+      transition: color var(--transition-fast);
+    }
+
+    .cart-remove-item:hover {
+      color: var(--terracotta);
+    }
+
+    .cart-drawer-footer {
+      padding: 1.5rem 1.8rem;
+      border-top: 1px solid var(--border-subtle);
+      background: var(--bg-cream-alt);
+    }
+
+    .cart-subtotal-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+      color: var(--text-muted);
+    }
+
+    .cart-total-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 1.4rem;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .cart-total-amount {
+      color: var(--olive-dark);
+      font-family: var(--font-sans);
+    }
+
+    .btn-whatsapp-checkout {
+      width: 100%;
+      background-color: var(--olive);
+      color: var(--bg-cream);
+      box-shadow: 0 6px 20px rgba(95, 107, 46, 0.25);
+    }
+
+    .btn-whatsapp-checkout:hover {
+      background-color: var(--olive-dark);
+    }
+
+    .cart-note {
+      text-align: center;
+      font-size: 0.76rem;
+      color: var(--text-muted);
+      margin-top: 0.75rem;
+    }
+
+    /* ==========================================================
+       11. FICHE RAPIDE PRODUIT & MODAL GUIDES
+       ========================================================== */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(30, 27, 22, 0.6);
+      backdrop-filter: blur(4px);
+      z-index: 150;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity var(--transition-normal);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-content {
+      background: var(--bg-cream);
+      border-radius: 24px;
+      max-width: 680px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      border: 1px solid var(--border-subtle);
+      animation: modalScaleUp var(--transition-normal);
+    }
+
+    @keyframes modalScaleUp {
+      from { transform: scale(0.92); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--white);
+      border: 1px solid var(--border-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      color: var(--text-main);
+      cursor: pointer;
+      z-index: 10;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .quickview-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 2rem;
+      padding: 2.2rem;
+    }
+
+    .quickview-image-arch {
+      aspect-ratio: 1 / 1.1;
+      border-radius: var(--radius-arch);
+      background: var(--bg-photo);
+      overflow: hidden;
+    }
+
+    .quickview-image-arch img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .quickview-info h3 {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 0.6rem;
+    }
+
+    .quickview-info .price-tag {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--olive);
+      margin-bottom: 1.2rem;
+    }
+
+    .quickview-info p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 1.8rem;
+    }
+
+    /* Floating Toast "Añadido" */
+    .toast-notification {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: var(--olive);
+      color: var(--bg-cream);
+      padding: 0.85rem 1.5rem;
+      border-radius: var(--radius-pill);
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      z-index: 200;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all var(--transition-fast);
+      pointer-events: none;
+    }
+
+    .toast-notification.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Floating Buttons: WhatsApp & Scroll to top */
+    .floating-cta-wrap {
+      position: fixed;
+      bottom: 2rem;
+      left: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      z-index: 100;
+    }
+
+    .btn-floating-whatsapp {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--olive);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-md);
+      transition: transform var(--transition-fast), background var(--transition-fast);
+      animation: pulseWhatsApp 6s ease-in-out infinite;
+    }
+
+    .btn-floating-whatsapp:hover {
+      transform: scale(1.1);
+      background: var(--olive-dark);
+    }
+
+    @keyframes pulseWhatsApp {
+      0%, 90%, 100% { transform: scale(1); box-shadow: 0 4px 14px rgba(95, 107, 46, 0.3); }
+      95% { transform: scale(1.08); box-shadow: 0 8px 24px rgba(95, 107, 46, 0.5); }
+    }
+
+    .btn-scroll-top {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--white);
+      color: var(--olive);
+      border: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-sm);
+      opacity: 0;
+      transform: translateY(12px);
+      transition: all var(--transition-fast);
+      pointer-events: none;
+    }
+
+    .btn-scroll-top.visible {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    .btn-scroll-top:hover {
+      background: var(--olive);
+      color: var(--bg-cream);
+    }
+
+    /* Fallback image styling */
+    .img-fallback {
+      background: var(--bg-photo);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+
+    /* Reveal animations */
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s var(--ease-luxury), transform 0.7s var(--ease-luxury);
+    }
+
+    .reveal-on-scroll.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* Prefer-reduced-motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .star-8 {
+        animation: none;
+      }
+      .hero-floating-card {
+        animation: none;
+      }
+      .reveal-on-scroll {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
+
+    /* ==========================================================
+       RESPONSIVE MOBILE (390px) & TABLET
+       ========================================================== */
+    @media (max-width: 1024px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 3.5rem;
+      }
+      .hero-left {
+        max-width: 100%;
+        text-align: center;
+      }
+      .hero-actions {
+        justify-content: center;
+      }
+      .hero-social-links {
+        justify-content: center;
+      }
+      .quiz-layout {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+      .collections-grid {
+        grid-template-columns: 1fr;
+      }
+      .guides-grid {
+        grid-template-columns: 1fr;
+      }
+      .tiktok-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .footer-columns-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .review-card {
+        min-width: calc(50% - 1rem);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-menu {
+        display: none;
+      }
+      .burger-btn {
+        display: flex;
+      }
+      .quickview-layout {
+        grid-template-columns: 1fr;
+      }
+      .review-card {
+        min-width: 100%;
+      }
+      .tiktok-header-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+      }
+      .footer-columns-grid {
+        grid-template-columns: 1fr;
+        gap: 2.2rem;
+      }
+      .hero-floating-card {
+        left: 0;
+        bottom: 10px;
+      }
+      .newsletter-form {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ==========================================================
+       1. EN-TÊTE FIXE
+       ========================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <div class="header-inner">
+        
+        <!-- Logo MH + Maison Hermance -->
+        <a href="#inicio" class="brand-logo" aria-label="Maison Hermance Inicio">
+          <div class="logo-monogram">MH</div>
+          <span class="brand-title">Maison Hermance</span>
+        </a>
+
+        <!-- Menu Navigation centré -->
+        <nav aria-label="Navegación principal">
+          <ul class="nav-menu">
+            <li><a href="#inicio" class="nav-link active" data-i18n="nav.inicio">Inicio</a></li>
+            <li><a href="#perfumes" class="nav-link" data-i18n="nav.perfumes">Perfumes</a></li>
+            <li><a href="#bolsos" class="nav-link" data-i18n="nav.bolsos">Bolsos</a></li>
+            <li><a href="#quiz" class="nav-link" data-i18n="nav.quiz">Quiz</a></li>
+            <li><a href="#guias" class="nav-link" data-i18n="nav.guias">Guías</a></li>
+          </ul>
+        </nav>
+
+        <!-- Sélecteur ES | FR | EN & Panier -->
+        <div class="header-actions">
+          <div class="lang-switcher" aria-label="Selector de idioma">
+            <button class="lang-btn active" data-lang="ES" aria-label="Español">ES</button>
+            <span class="lang-divider">|</span>
+            <button class="lang-btn" data-lang="FR" aria-label="Français">FR</button>
+            <span class="lang-divider">|</span>
+            <button class="lang-btn" data-lang="EN" aria-label="English">EN</button>
+          </div>
+
+          <button class="cart-btn" id="openCartBtn" aria-label="Abrir carrito de compras">
+            <span data-i18n="header.carrito">Carrito</span>
+            <span class="cart-count-badge">(<span id="cartCount">1</span>)</span>
+          </button>
+
+          <!-- Burger Button Mobile -->
+          <button class="burger-btn" id="burgerBtn" aria-label="Abrir menú de navegación" aria-expanded="false">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Fullscreen -->
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <a href="#inicio" class="mobile-nav-link" data-i18n="nav.inicio">Inicio</a>
+    <a href="#perfumes" class="mobile-nav-link" data-i18n="nav.perfumes">Perfumes</a>
+    <a href="#bolsos" class="mobile-nav-link" data-i18n="nav.bolsos">Bolsos</a>
+    <a href="#quiz" class="mobile-nav-link" data-i18n="nav.quiz">Quiz</a>
+    <a href="#guias" class="mobile-nav-link" data-i18n="nav.guias">Guías</a>
+  </div>
+
+  <main>
+
+    <!-- ==========================================================
+         2. HERO SECTION
+         ========================================================== -->
+    <section class="hero-section" id="inicio">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Colonne Gauche -->
+          <div class="hero-left reveal-on-scroll">
+            <div class="hero-mini-badge">
+              <div class="mini-bag-arch">
+                <img id="heroMiniBag" alt="Maison Hermance artesanía" src="" onerror="this.onerror=null; this.classList.add('img-fallback')" />
+              </div>
+              <span class="hero-mini-text" data-i18n="hero.slogan">Elegancia y Fragancias</span>
+            </div>
+
+            <h1 class="hero-title" data-i18n="hero.title">
+              El perfume que te define.
+            </h1>
+
+            <p class="hero-description" data-i18n="hero.desc">
+              Perfumes y bolsos seleccionados con cuidado. Envío a toda Europa.
+            </p>
+
+            <div class="hero-actions">
+              <button class="btn btn-olive" id="heroQuizBtn" data-i18n="hero.btnQuiz">
+                Encuentra tu perfume
+              </button>
+            </div>
+
+            <div class="hero-social-links">
+              <a href="#" class="hero-social-link" id="heroTikTokLink" target="_blank" rel="noopener">
+                TikTok &rarr;
+              </a>
+              <a href="#" class="hero-social-link" id="heroWhatsAppLink" target="_blank" rel="noopener">
+                WhatsApp &rarr;
+              </a>
+            </div>
+          </div>
+
+          <!-- Colonne Droite : Grande arche ovale & Décalage Olive -->
+          <div class="hero-right reveal-on-scroll">
+            <div class="hero-arch-wrapper">
+              
+              <!-- Étoile décorative 8 branches en haut à gauche -->
+              <div class="hero-star-decor" aria-hidden="true">
+                <svg class="star-8" viewBox="0 0 24 24" width="24" height="24">
+                  <path d="M12 0l2.8 7.2L22 12l-7.2 2.8L12 22l-2.8-7.2L2 12l7.2-2.8z" fill="#5F6B2E"/>
+                </svg>
+              </div>
+
+              <!-- Arche Olive décalée derrière -->
+              <div class="hero-arch-backdrop" aria-hidden="true"></div>
+
+              <!-- Arche Ovale principale -->
+              <div class="hero-arch-main">
+                <img id="heroMainImg" alt="Flacon de parfum et sac en cuir Maison Hermance" src="" onerror="this.onerror=null; this.classList.add('img-fallback')" />
+              </div>
+
+              <!-- Carte flottante blanche arrondie -->
+              <div class="hero-floating-card">
+                <div class="floating-thumb">
+                  <img id="heroFloatingThumb" alt="Ambre Royal miniature" src="" onerror="this.onerror=null; this.classList.add('img-fallback')" />
+                </div>
+                <div class="floating-meta">
+                  <h4>Ambre Royal 100 ml</h4>
+                  <div>
+                    <span class="price">79,90 €</span>
+                    <span class="stars-terracotta">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         3. COLLECTIONS (« Dos universos »)
+         ========================================================== -->
+    <section class="collections-section" id="colecciones">
+      <div class="container">
+        
+        <div class="section-intro reveal-on-scroll">
+          <span class="section-eyebrow" data-i18n="collections.eyebrow">Maison Hermance</span>
+          <h2 class="section-title" data-i18n="collections.title">Dos universos</h2>
+          <div class="section-separator"></div>
+        </div>
+
+        <div class="collections-grid">
+          
+          <!-- Collection Perfumes -->
+          <a href="#perfumes" class="collection-card reveal-on-scroll" id="colPerfumesCard" aria-label="Descubrir Perfumes">
+            <div class="collection-arch">
+              <img id="colPerfumesImg" alt="Colección Perfumes Maison Hermance" src="" onerror="this.onerror=null; this.classList.add('img-fallback')" />
+              <div class="collection-overlay"></div>
+              <div class="collection-content">
+                <h3 data-i18n="collections.perfumes">Perfumes</h3>
+                <span class="collection-cta" data-i18n="collections.descubrir">Descubrir &rarr;</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Collection Bolsos -->
+          <a href="#bolsos" class="collection-card reveal-on-scroll" id="colBolsosCard" aria-label="Descubrir Bolsos">
+            <div class="collection-arch">
+              <img id="colBolsosImg" alt="Colección Bolsos Maison Hermance" src="" onerror="this.onerror=null; this.classList.add('img-fallback')" />
+              <div class="collection-overlay"></div>
+              <div class="collection-content">
+                <h3 data-i18n="collections.bolsos">Bolsos</h3>
+                <span class="collection-cta" data-i18n="collections.descubrir">Descubrir &rarr;</span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         4. QUIZ SECTION (Fond #F3EBDD)
+         ========================================================== -->
+    <section class="quiz-section" id="quiz">
+      <div class="container">
+        <div class="quiz-layout">
+          
+          <!-- Gauche éditoriale -->
+          <div class="quiz-left reveal-on-scroll">
+            <span class="section-eyebrow" data-i18n="quiz.eyebrow">Diagnóstico Personalizado</span>
+            <h2 class="section-title" data-i18n="quiz.title">Tu perfume en 5 preguntas.</h2>
+            <p data-i18n="quiz.desc">
+              Ocasión, estilo y presupuesto. Recibe 3 recomendaciones por email.
+            </p>
+            <button class="btn btn-outline-olive" id="startQuizBtn" data-i18n="quiz.btnStart">
+              Empezar el quiz
+            </button>
+          </div>
+
+          <!-- Droite : Carte Olive Interactive -->
+          <div class="quiz-right reveal-on-scroll">
+            <div class="quiz-card" id="quizCard">
+              
+              <!-- Questions Stepper -->
+              <div id="quizStepper">
+                <div class="quiz-card-header">
+                  <span class="quiz-step-indicator" id="quizStepIndicator">Pregunta 1 / 5</span>
+                  <div class="quiz-progress-track">
+                    <div class="quiz-progress-bar" id="quizProgressBar" style="width: 20%;"></div>
+                  </div>
+                </div>
+
+                <h3 class="quiz-question-title" id="quizQuestionTitle">¿Para qué ocasión?</h3>
+                <p class="quiz-question-desc" id="quizQuestionDesc">Elige el momento principal en el que deseas llevar tu fragancia:</p>
+
+                <div class="quiz-options-list" id="quizOptionsList">
+                  <!-- Dynamic Options injected here -->
+                </div>
+
+                <div class="quiz-nav-footer">
+                  <button class="quiz-back-btn" id="quizBackBtn" style="visibility: hidden;">
+                    &larr; <span data-i18n="quiz.back">Atrás</span>
+                  </button>
+                  <span style="opacity: 0.7; font-size: 0.8rem;">Maison Hermance Selection</span>
+                </div>
+              </div>
+
+              <!-- Results View -->
+              <div class="quiz-results-container" id="quizResults">
+                <div class="quiz-card-header">
+                  <span class="quiz-step-indicator" data-i18n="quiz.resultsTitle">Tus recomendaciones</span>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M12 6v6l4 2"/>
+                  </svg>
+                </div>
+
+                <h3 class="quiz-question-title" data-i18n="quiz.recsSubtitle">3 fragancias seleccionadas para ti</h3>
+
+                <div class="quiz-recs-grid" id="quizRecsList">
+                  <!-- Dynamic recommended products -->
+                </div>
+
+                <form class="quiz-email-form" id="quizEmailForm">
+                  <input type="email" required placeholder="Tu email" class="quiz-email-input" id="quizEmailInput" data-i18n-attr="placeholder:quiz.emailPlaceholder" />
+                  <button type="submit" class="btn btn-newsletter" data-i18n="quiz.btnReceive">
+                    Recibir
+                  </button>
+                </form>
+
+                <div class="quiz-confirm-msg" id="quizConfirmMsg" data-i18n="quiz.confirmMsg">
+                  ¡Recomendaciones enviadas con éxito! Revisa tu bandeja de entrada.
+                </div>
+
+                <div style="margin-top: 1.2rem; text-align: center;">
+                  <button class="quiz-back-btn" id="quizRestartBtn" style="visibility: visible;">
+                    &circlearrowleft; <span data-i18n="quiz.restart">Repetir el quiz</span>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         5. FAVORIS (« Nuestros favoritos »)
+         ========================================================== -->
+    <section class="favorites-section" id="favoritos">
+      <div class="container">
+        
+        <div class="section-intro reveal-on-scroll">
+          <span class="section-eyebrow" data-i18n="favorites.eyebrow">Colección Exclusiva</span>
+          <h2 class="section-title" data-i18n="favorites.title">Nuestros favoritos</h2>
+          <div class="section-separator"></div>
+        </div>
+
+        <!-- Filtres en Pilules -->
+        <div class="filters-wrap reveal-on-scroll">
+          <button class="filter-btn active" data-filter="all" data-i18n="filter.todos">Todos</button>
+          <button class="filter-btn" data-filter="perfumes" data-i18n="filter.perfumes">Perfumes</button>
+          <button class="filter-btn" data-filter="bolsos" data-i18n="filter.bolsos">Bolsos</button>
+        </div>
+
+        <!-- Grille des Produits -->
+        <div class="products-grid" id="productsGrid">
+          <!-- Injected via JavaScript -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         6. AVIS CLIENTS (« Opiniones de nuestros clientes »)
+         ========================================================== -->
+    <section class="reviews-section" id="opiniones">
+      <div class="container">
+        
+        <div class="section-intro reveal-on-scroll">
+          <span class="section-eyebrow" data-i18n="reviews.eyebrow">Testimonios Reales</span>
+          <h2 class="section-title" data-i18n="reviews.title">Opiniones de nuestros clientes</h2>
+          <div class="section-separator"></div>
+        </div>
+
+        <div class="carousel-container reveal-on-scroll" id="reviewsCarousel">
+          <div class="carousel-track-wrapper">
+            <div class="carousel-track" id="reviewsTrack">
+              <!-- Cards injected via JS -->
+            </div>
+          </div>
+
+          <!-- Flèches & Dots -->
+          <div class="carousel-controls">
+            <button class="carousel-arrow" id="reviewPrevBtn" aria-label="Opinión anterior">&larr;</button>
+            <div class="carousel-dots" id="reviewDots"></div>
+            <button class="carousel-arrow" id="reviewNextBtn" aria-label="Opinión siguiente">&rarr;</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         7. GUIDES (« Guías para elegir bien » - Fond #F3EBDD)
+         ========================================================== -->
+    <section class="guides-section" id="guias">
+      <div class="container">
+        
+        <div class="section-intro reveal-on-scroll">
+          <span class="section-eyebrow" data-i18n="guides.eyebrow">Asesoramiento Editorial</span>
+          <h2 class="section-title" data-i18n="guides.title">Guías para elegir bien</h2>
+          <div class="section-separator"></div>
+        </div>
+
+        <div class="guides-grid">
+          
+          <!-- Guide 1 -->
+          <div class="guide-card reveal-on-scroll" data-guide-id="perfume">
+            <div class="guide-arch">
+              <img id="guideImg1" alt="Cómo elegir tu perfume" src="" onerror="this.onerror=null; this.classList.add('img-fallback')" />
+            </div>
+            <div class="guide-body">
+              <h4 data-i18n="guides.g1Title">Cómo elegir tu perfume</h4>
+              <span class="guide-link" data-i18n="guides.readLink">Leer la guía &rarr;</span>
+            </div>
+          </div>
+
+          <!-- Guide 2 -->
+          <div class="guide-card reveal-on-scroll" data-guide-id="gift">
+            <div class="guide-arch">
+              <img id="guideImg2" alt="Ideas de regalo" src="" onerror="this.onerror=null; this.classList.add('img-fallback')" />
+            </div>
+            <div class="guide-body">
+              <h4 data-i18n="guides.g2Title">Ideas de regalo</h4>
+              <span class="guide-link" data-i18n="guides.readLink">Leer la guía &rarr;</span>
+            </div>
+          </div>
+
+          <!-- Guide 3 -->
+          <div class="guide-card reveal-on-scroll" data-guide-id="bag">
+            <div class="guide-arch">
+              <img id="guideImg3" alt="Cómo elegir tu bolso" src="" onerror="this.onerror=null; this.classList.add('img-fallback')" />
+            </div>
+            <div class="guide-body">
+              <h4 data-i18n="guides.g3Title">Cómo elegir tu bolso</h4>
+              <span class="guide-link" data-i18n="guides.readLink">Leer la guía &rarr;</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         8. TIKTOK SECTION
+         ========================================================== -->
+    <section class="tiktok-section" id="tiktok">
+      <div class="container">
+        
+        <div class="tiktok-header-row reveal-on-scroll">
+          <div>
+            <span class="section-eyebrow" data-i18n="tiktok.eyebrow">Comunidad Maison Hermance</span>
+            <h2 class="section-title" data-i18n="tiktok.title">Síguenos en TikTok</h2>
+            <p style="font-size: 0.95rem; color: var(--olive); font-weight: 600; margin-top: 0.35rem;">
+              @MAISON HERMANCE
+            </p>
+          </div>
+
+          <a href="#" id="tiktokFollowBtn" class="btn btn-olive" target="_blank" rel="noopener" data-i18n="tiktok.btnFollow">
+            Seguir
+          </a>
+        </div>
+
+        <div class="tiktok-grid">
+          
+          <a href="#" class="tiktok-card reveal-on-scroll tiktok-link" target="_blank" rel="noopener" aria-label="Ver video TikTok unboxing">
+            <img id="tiktokImg1" alt="TikTok unboxing bolso" src="" onerror="this.onerror=null; this.classList.add('img-fallback')" />
+            <div class="tiktok-overlay"></div>
+            <div class="tiktok-play-icon" aria-hidden="true">&#9658;</div>
+            <div class="tiktok-meta">
+              <p>Desempaquetando el Bolso Tote Camel</p>
+            </div>
+          </a>
+
+          <a href="#" class="tiktok-card reveal-on-scroll tiktok-link" target="_blank" rel="noopener" aria-label="Ver video TikTok perfume">
+            <img id="tiktokImg2" alt="TikTok estela perfume" src="" onerror="this.onerror=null; this.classList.add('img-fallback')" />
+            <div class="tiktok-overlay"></div>
+            <div class="tiktok-play-icon" aria-hidden="true">&#9658;</div>
+            <div class="tiktok-meta">
+              <p>Ambre Royal en primer plano</p>
+            </div>
+          </a>
+
+          <a href="#" class="tiktok-card reveal-on-scroll tiktok-link" target="_blank" rel="noopener" aria-label="Ver video TikTok regalo">
+            <img id="tiktokImg3" alt="TikTok cofre regalo" src="" onerror="this.onerror=null; this.classList.add('img-fallback')" />
+            <div class="tiktok-overlay"></div>
+            <div class="tiktok-play-icon" aria-hidden="true">&#9658;</div>
+            <div class="tiktok-meta">
+              <p>El arte de envolver con lazo dorado</p>
+            </div>
+          </a>
+
+          <a href="#" class="tiktok-card reveal-on-scroll tiktok-link" target="_blank" rel="noopener" aria-label="Ver video TikTok styling">
+            <img id="tiktokImg4" alt="TikTok look bolso burdeos" src="" onerror="this.onerror=null; this.classList.add('img-fallback')" />
+            <div class="tiktok-overlay"></div>
+            <div class="tiktok-play-icon" aria-hidden="true">&#9658;</div>
+            <div class="tiktok-meta">
+              <p>Cómo combinar el Bolso Burdeos</p>
+            </div>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================
+       9. PIED DE PAGE (Fond olive #5F6B2E, texte crème)
+       ========================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      
+      <!-- Newsletter Banner -->
+      <div class="newsletter-banner reveal-on-scroll">
+        <h3 data-i18n="footer.newsletterTitle">Recibe nuestras novedades</h3>
+        <p data-i18n="footer.newsletterDesc">Ediciones limitadas, notas olfativas y lanzamientos exclusivos.</p>
+
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" required placeholder="Tu email" class="newsletter-input" id="newsletterInput" data-i18n-attr="placeholder:footer.emailPlaceholder" />
+          <button type="submit" class="btn btn-newsletter" data-i18n="footer.btnSubscribe">
+            Suscribirme
+          </button>
+        </form>
+
+        <div class="newsletter-feedback" id="newsletterFeedback" data-i18n="footer.subConfirmation">
+          ¡Gracias por unirte! Te hemos enviado un mensaje de bienvenida.
+        </div>
+      </div>
+
+      <!-- 4 Colonnes -->
+      <div class="footer-columns-grid">
+        
+        <!-- Col 1: Tienda -->
+        <div class="footer-col">
+          <h5 data-i18n="footer.colTienda">Tienda</h5>
+          <ul class="footer-links-list">
+            <li><a href="#perfumes" class="footer-link" data-i18n="footer.linkPerfumes">Perfumes</a></li>
+            <li><a href="#bolsos" class="footer-link" data-i18n="footer.linkBolsos">Bolsos</a></li>
+            <li><a href="#guias" class="footer-link" data-i18n="footer.linkCofres">Cofres regalo</a></li>
+            <li><a href="#quiz" class="footer-link" data-i18n="footer.linkQuiz">Quiz</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 2: Ayuda -->
+        <div class="footer-col">
+          <h5 data-i18n="footer.colAyuda">Ayuda</h5>
+          <ul class="footer-links-list">
+            <li><a href="#inicio" class="footer-link" data-i18n="footer.linkEnvios">Envíos y entregas</a></li>
+            <li><a href="#inicio" class="footer-link" data-i18n="footer.linkDevoluciones">Devoluciones</a></li>
+            <li><a href="#inicio" class="footer-link" data-i18n="footer.linkFaq">Preguntas frecuentes</a></li>
+            <li><a href="#inicio" class="footer-link" data-i18n="footer.linkContacto">Contacto</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Legal -->
+        <div class="footer-col">
+          <h5 data-i18n="footer.colLegal">Legal</h5>
+          <ul class="footer-links-list">
+            <li><a href="#inicio" class="footer-link" data-i18n="footer.linkAviso">Aviso legal</a></li>
+            <li><a href="#inicio" class="footer-link" data-i18n="footer.linkPrivacidad">Política de privacidad</a></li>
+            <li><a href="#inicio" class="footer-link" data-i18n="footer.linkCookies">Política de cookies</a></li>
+            <li><a href="#inicio" class="footer-link" data-i18n="footer.linkTerminos">Términos y condiciones</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contacto -->
+        <div class="footer-col">
+          <h5 data-i18n="footer.colContacto">Contacto</h5>
+          <ul class="footer-links-list">
+            <li><a href="tel:+34641016013" class="footer-link">+34 641 016 013</a></li>
+            <li><a href="#" class="footer-link" id="footerWhatsApp">WhatsApp</a></li>
+            <li><a href="#" class="footer-link" id="footerTikTok">TikTok @MAISON HERMANCE</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Ligne Finale & Paiement -->
+      <div class="footer-bottom-row">
+        <div class="payment-badges-row">
+          <span class="payment-badge">Visa</span>
+          <span class="payment-badge">Mastercard</span>
+          <span class="payment-badge">PayPal</span>
+          <span class="payment-badge">Klarna</span>
+        </div>
+
+        <p data-i18n="footer.copyright">
+          &copy; 2026 Maison Hermance. Todos los derechos reservados.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==========================================================
+       10. MINI-PANIER (Tiroir Latéral)
+       ========================================================== -->
+  <div class="cart-drawer-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Carrito de compras">
+    
+    <div class="cart-drawer-header">
+      <h3 data-i18n="cart.title">Tu Carrito</h3>
+      <button class="cart-close-btn" id="closeCartBtn" aria-label="Cerrar carrito">&times;</button>
+    </div>
+
+    <div class="cart-items-list" id="cartItemsList">
+      <!-- Items dynamically populated -->
+    </div>
+
+    <div class="cart-drawer-footer">
+      <div class="cart-subtotal-row">
+        <span data-i18n="cart.subtotal">Subtotal:</span>
+        <span id="cartSubtotal">0,00 €</span>
+      </div>
+      <div class="cart-total-row">
+        <span data-i18n="cart.total">Total:</span>
+        <span class="cart-total-amount" id="cartTotal">0,00 €</span>
+      </div>
+
+      <button class="btn btn-whatsapp-checkout" id="whatsappCheckoutBtn">
+        <span data-i18n="cart.btnCheckout">Finalizar por WhatsApp</span> &rarr;
+      </button>
+
+      <p class="cart-note" data-i18n="cart.note">
+        El pago y la confirmación se realizan directamente por WhatsApp con atención personalizada.
+      </p>
+    </div>
+  </aside>
+
+  <!-- ==========================================================
+       11. FICHE RAPIDE PRODUIT (Quick View Modal)
+       ========================================================== -->
+  <div class="modal-overlay" id="quickViewModal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true">
+      <button class="modal-close-btn" id="closeQuickViewBtn" aria-label="Cerrar vista rápida">&times;</button>
+      <div class="quickview-layout">
+        <div class="quickview-image-arch">
+          <img id="quickViewImg" alt="Producto Maison Hermance" src="" onerror="this.onerror=null; this.classList.add('img-fallback')" />
+        </div>
+        <div class="quickview-info">
+          <h3 id="quickViewTitle">Nombre del Producto</h3>
+          <div class="quickview-reviews" id="quickViewReviews" style="margin-bottom: 0.5rem;">
+            <span class="stars-terracotta">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <span style="font-size: 0.8rem; color: var(--text-muted);" id="quickViewReviewsCount"></span>
+          </div>
+          <div class="price-tag" id="quickViewPrice">0,00 €</div>
+          <p id="quickViewDesc">Descripción del producto.</p>
+          <button class="btn btn-olive" id="quickViewAddBtn" style="width: 100%;">
+            <span data-i18n="btn.add">Añadir al carrito</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Guide Reading Modal -->
+  <div class="modal-overlay" id="guideModal" aria-hidden="true">
+    <div class="modal-content" style="max-width: 620px; padding: 2.4rem;" role="dialog" aria-modal="true">
+      <button class="modal-close-btn" id="closeGuideModalBtn" aria-label="Cerrar guía">&times;</button>
+      <h3 class="font-serif" id="guideModalTitle" style="font-size: 1.8rem; margin-bottom: 1rem; color: var(--text-main);">
+        Guía Maison Hermance
+      </h3>
+      <div id="guideModalBody" style="color: var(--text-muted); line-height: 1.7; font-size: 0.98rem;">
+        <!-- Injected -->
+      </div>
+      <div style="margin-top: 1.8rem; text-align: right;">
+        <button class="btn btn-outline-olive" id="guideModalCloseAction" data-i18n="modal.close">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification "Añadido" -->
+  <div class="toast-notification" id="toastNotification" role="status">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <path d="M20 6L9 17l-5-5"/>
+    </svg>
+    <span id="toastText">Añadido al carrito</span>
+  </div>
+
+  <!-- Floating Buttons (WhatsApp & Scroll Top) -->
+  <div class="floating-cta-wrap">
+    <a href="#" class="btn-floating-whatsapp" id="floatingWhatsAppBtn" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+      </svg>
+    </a>
+    <button class="btn-scroll-top" id="scrollTopBtn" aria-label="Volver arriba">
+      &uarr;
+    </button>
+  </div>
+
+
+  <!-- ==========================================================
+       JAVASCRIPT VANILLA (AUTONOME & CONFIGURABLE)
+       ========================================================== -->
+  <script>
+    /* ==========================================================
+       1. CONSTANTES & DONNÉES CONFIGURABLES
+       ========================================================== */
+    const WHATSAPP_NUMBER = "+34641016013";
+    const TIKTOK_URL = "https://www.tiktok.com/@maisonhermance";
+
+    // URLs Unsplash directes et vérifiées
+    const IMAGES = {
+      hero: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=1200&q=80",
+      heroBagMini: "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=300&q=80",
+      heroFloatingThumb: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=200&q=80",
+      collectionPerfumes: "https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&w=1000&q=80",
+      collectionBolsos: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=1000&q=80",
+      noirElegance: "https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=800&q=80",
+      ambreRoyal: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=800&q=80",
+      toteCamel: "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=800&q=80",
+      bolsoBurdeos: "https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&w=800&q=80",
+      fleurBlanche: "https://images.unsplash.com/photo-1547887537-6158d64c35b3?auto=format&fit=crop&w=800&q=80",
+      bolsoNoir: "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=800&q=80",
+      guideSpray: "https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?auto=format&fit=crop&w=800&q=80",
+      guideGift: "https://images.unsplash.com/photo-1513885535751-8b9238bd345a?auto=format&fit=crop&w=800&q=80",
+      guideBag: "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80",
+      review1: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80",
+      review2: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80",
+      review3: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=80",
+      tiktok1: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=600&q=80",
+      tiktok2: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=600&q=80",
+      tiktok3: "https://images.unsplash.com/photo-1513885535751-8b9238bd345a?auto=format&fit=crop&w=600&q=80",
+      tiktok4: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=600&q=80"
+    };
+
+    // Produits avec tags pour le Quiz olfactif
+    const PRODUCTS = [
+      {
+        id: "noir-elegance",
+        name: "Noir Élégance – Eau de Parfum 50 ml",
+        category: "perfumes",
+        price: 49.90,
+        originalPrice: null,
+        discountBadge: null,
+        badge: null,
+        rating: 5,
+        reviewsCount: 24,
+        image: IMAGES.noirElegance,
+        description: "Flacon rectangulaire en verre fumé noir avec bouchon doré poli. Notes magnétiques de bergamote sombre, vetiver et sándalo noble.",
+        tags: { occasion: "noche", familia: "amaderado", intensidad: "intensa", presupuesto: "menos-50", estilo: "clasico" }
+      },
+      {
+        id: "ambre-royal",
+        name: "Ambre Royal – Eau de Parfum 100 ml",
+        category: "perfumes",
+        price: 79.90,
+        originalPrice: 99.90,
+        discountBadge: "-20 %",
+        badge: "Novedad",
+        rating: 5,
+        reviewsCount: 38,
+        image: IMAGES.ambreRoyal,
+        description: "Flacon en verre transparent aux reflets ambrés lumineux avec bouchon doré. Accords de vanille bourbon, cèdre et ambre précieux.",
+        tags: { occasion: "noche", familia: "oriental", intensidad: "intensa", presupuesto: "50-80", estilo: "audaz" }
+      },
+      {
+        id: "tote-camel",
+        name: "Bolso Tote Camel",
+        category: "bolsos",
+        price: 89.00,
+        originalPrice: null,
+        discountBadge: null,
+        badge: "Más vendido",
+        rating: 5,
+        reviewsCount: 17,
+        image: IMAGES.toteCamel,
+        description: "Cuero vacuno granulado tono camel sin logotipos aparentes. Dos asas ergonómicas reforzadas y amplio espacio interior.",
+        tags: { occasion: "dia", familia: "amaderado", intensidad: "media", presupuesto: "mas-80", estilo: "clasico" }
+      },
+      {
+        id: "bolso-burdeos",
+        name: "Bolso Burdeos con bandolera",
+        category: "bolsos",
+        price: 119.00,
+        originalPrice: null,
+        discountBadge: null,
+        badge: null,
+        rating: 5,
+        reviewsCount: 21,
+        image: IMAGES.bolsoBurdeos,
+        description: "Bolso estructurado en cuero burdeos noble sin logotipo, con herrajes dorados cepillados y bandolera desmontable.",
+        tags: { occasion: "noche", familia: "oriental", intensidad: "intensa", presupuesto: "mas-80", estilo: "audaz" }
+      },
+      {
+        id: "fleur-blanche",
+        name: "Fleur Blanche – Eau de Parfum 50 ml",
+        category: "perfumes",
+        price: 54.00,
+        originalPrice: null,
+        discountBadge: null,
+        badge: null,
+        rating: 5,
+        reviewsCount: 19,
+        image: IMAGES.fleurBlanche,
+        description: "Bouquet floral raffiné de jasmin blanc, fleur d'oranger et néroli frais. Parfait pour les matins ensoleillés.",
+        tags: { occasion: "dia", familia: "floral", intensidad: "suave", presupuesto: "50-80", estilo: "moderno" }
+      },
+      {
+        id: "bolso-noir",
+        name: "Bolso Clásico Noir",
+        category: "bolsos",
+        price: 109.00,
+        originalPrice: null,
+        discountBadge: null,
+        badge: null,
+        rating: 5,
+        reviewsCount: 15,
+        image: IMAGES.bolsoNoir,
+        description: "Cuero vacuno negro azabache de textura lisa y cierre magnético discreto. Un esencial de alta marroquinería europea.",
+        tags: { occasion: "dia", familia: "fresco", intensidad: "media", presupuesto: "mas-80", estilo: "moderno" }
+      }
+    ];
+
+    const REVIEWS = [
+      {
+        id: "rev-1",
+        name: "Laura",
+        city: "Madrid",
+        text: "«El aroma de Noir Élégance es simplemente sublime. Duración impecable durante todo el día y el packaging es una auténtica joya sobre mi tocador.»",
+        avatar: IMAGES.review1
+      },
+      {
+        id: "rev-2",
+        name: "Carlos",
+        city: "Barcelona",
+        text: "«Compré el Bolso Tote Camel para un regalo y la calidad del cuero supera con creces mis expectativas. Envío rapidísimo a Barcelona.»",
+        avatar: IMAGES.review2
+      },
+      {
+        id: "rev-3",
+        name: "Elena",
+        city: "Sevilla",
+        text: "«Ambre Royal tiene una estela cálida y distinguida que no pasa desapercibida. La atención al cliente y los detalles del envío son de diez.»",
+        avatar: IMAGES.review3
+      }
+    ];
+
+    const QUIZ_QUESTIONS = [
+      {
+        id: 1,
+        key: "occasion",
+        title: "¿Para qué ocasión?",
+        desc: "Elige el momento en el que deseas disfrutar de tu fragancia:",
+        options: [
+          { label: "Día a día", value: "dia" },
+          { label: "Noche", value: "noche" },
+          { label: "Regalo", value: "regalo" }
+        ]
+      },
+      {
+        id: 2,
+        key: "familia",
+        title: "¿Qué familia olfativa prefieres?",
+        desc: "El acorde que mejor expresa tu carácter:",
+        options: [
+          { label: "Floral", value: "floral" },
+          { label: "Amaderado", value: "amaderado" },
+          { label: "Oriental", value: "oriental" },
+          { label: "Fresco", value: "fresco" }
+        ]
+      },
+      {
+        id: 3,
+        key: "intensidad",
+        title: "¿Cuál es tu intensidad ideal?",
+        desc: "La presencia y estela que buscas dejar a tu paso:",
+        options: [
+          { label: "Suave", value: "suave" },
+          { label: "Media", value: "media" },
+          { label: "Intensa", value: "intensa" }
+        ]
+      },
+      {
+        id: 4,
+        key: "presupuesto",
+        title: "¿Qué presupuesto consideras?",
+        desc: "Para afinar la mejor proporción entre extracto y formato:",
+        options: [
+          { label: "Menos de 50 €", value: "menos-50" },
+          { label: "50 a 80 €", value: "50-80" },
+          { label: "Más de 80 €", value: "mas-80" }
+        ]
+      },
+      {
+        id: 5,
+        key: "estilo",
+        title: "¿Cuál es tu estilo personal?",
+        desc: "La armonía con tu silueta y día a día:",
+        options: [
+          { label: "Clásico", value: "clasico" },
+          { label: "Moderno", value: "moderno" },
+          { label: "Audaz", value: "audaz" }
+        ]
+      }
+    ];
+
+    const GUIDES_CONTENT = {
+      perfume: {
+        title: "Cómo elegir tu perfume",
+        body: "<p>Elegir un perfume personal es un ritual íntimo. La clave reside en comprender cómo interactúan las notas olfativas con tu pH natural.</p><p>Te recomendamos vaporizar a 15 cm sobre los puntos de pulso (muñecas, detrás de las orejas) y permitir que la fragancia repose 20 minutos antes de juzgar su estela final.</p>"
+      },
+      gift: {
+        title: "Ideas de regalo",
+        body: "<p>Nuestros cofres regalo Maison Hermance se presentan en cajas forradas con lazo artesanal. Un acierto indiscutible para aniversarios o momentos especiales.</p><p>Para acertar siempre, combina un frasco de 50 ml con una muestra de cata para que el destinatario descubra las notas antes de abrir el sello principal.</p>"
+      },
+      bag: {
+        title: "Cómo elegir tu bolso",
+        body: "<p>Un bolso de lujo debe unir proporciones perfectas, ligereza y durabilidad extrema.</p><p>Para el día a día, el Bolso Tote Camel ofrece versatilidad sin esfuerzo. Para veladas y compromisos de noche, la silueta estructurada del Bolso Burdeos eleva cualquier atuendo.</p>"
+      }
+    };
+
+    /* ==========================================================
+       2. TRADUCTIONS (ES / FR / EN)
+       ========================================================== */
+    const TRANSLATIONS = {
+      ES: {
+        "nav.inicio": "Inicio",
+        "nav.perfumes": "Perfumes",
+        "nav.bolsos": "Bolsos",
+        "nav.quiz": "Quiz",
+        "nav.guias": "Guías",
+        "header.carrito": "Carrito",
+        "hero.slogan": "Elegancia y Fragancias",
+        "hero.title": "El perfume que te define.",
+        "hero.desc": "Perfumes y bolsos seleccionados con cuidado. Envío a toda Europa.",
+        "hero.btnQuiz": "Encuentra tu perfume",
+        "collections.eyebrow": "Maison Hermance",
+        "collections.title": "Dos universos",
+        "collections.perfumes": "Perfumes",
+        "collections.bolsos": "Bolsos",
+        "collections.descubrir": "Descubrir →",
+        "quiz.eyebrow": "Diagnóstico Personalizado",
+        "quiz.title": "Tu perfume en 5 preguntas.",
+        "quiz.desc": "Ocasión, estilo y presupuesto. Recibe 3 recomendaciones por email.",
+        "quiz.btnStart": "Empezar el quiz",
+        "quiz.back": "Atrás",
+        "quiz.resultsTitle": "Tus recomendaciones",
+        "quiz.recsSubtitle": "3 fragancias seleccionadas para ti",
+        "quiz.emailPlaceholder": "Tu email",
+        "quiz.btnReceive": "Recibir",
+        "quiz.confirmMsg": "¡Recomendaciones enviadas con éxito! Revisa tu bandeja de entrada.",
+        "quiz.restart": "Repetir el quiz",
+        "favorites.eyebrow": "Colección Exclusiva",
+        "favorites.title": "Nuestros favoritos",
+        "filter.todos": "Todos",
+        "filter.perfumes": "Perfumes",
+        "filter.bolsos": "Bolsos",
+        "btn.add": "Añadir al carrito",
+        "reviews.eyebrow": "Testimonios Reales",
+        "reviews.title": "Opiniones de nuestros clientes",
+        "guides.eyebrow": "Asesoramiento Editorial",
+        "guides.title": "Guías para elegir bien",
+        "guides.g1Title": "Cómo elegir tu perfume",
+        "guides.g2Title": "Ideas de regalo",
+        "guides.g3Title": "Cómo elegir tu bolso",
+        "guides.readLink": "Leer la guía →",
+        "tiktok.eyebrow": "Comunidad Maison Hermance",
+        "tiktok.title": "Síguenos en TikTok",
+        "tiktok.btnFollow": "Seguir",
+        "footer.newsletterTitle": "Recibe nuestras novedades",
+        "footer.newsletterDesc": "Ediciones limitadas, notas olfativas y lanzamientos exclusivos.",
+        "footer.emailPlaceholder": "Tu email",
+        "footer.btnSubscribe": "Suscribirme",
+        "footer.subConfirmation": "¡Gracias por unirte! Te hemos enviado un mensaje de bienvenida.",
+        "footer.colTienda": "Tienda",
+        "footer.linkPerfumes": "Perfumes",
+        "footer.linkBolsos": "Bolsos",
+        "footer.linkCofres": "Cofres regalo",
+        "footer.linkQuiz": "Quiz",
+        "footer.colAyuda": "Ayuda",
+        "footer.linkEnvios": "Envíos y entregas",
+        "footer.linkDevoluciones": "Devoluciones",
+        "footer.linkFaq": "Preguntas frecuentes",
+        "footer.linkContacto": "Contacto",
+        "footer.colLegal": "Legal",
+        "footer.linkAviso": "Aviso legal",
+        "footer.linkPrivacidad": "Política de privacidad",
+        "footer.linkCookies": "Política de cookies",
+        "footer.linkTerminos": "Términos y condiciones",
+        "footer.colContacto": "Contacto",
+        "footer.copyright": "© 2026 Maison Hermance. Todos los derechos reservados.",
+        "cart.title": "Tu Carrito",
+        "cart.empty": "Tu carrito está vacío",
+        "cart.subtotal": "Subtotal:",
+        "cart.total": "Total:",
+        "cart.btnCheckout": "Finalizar por WhatsApp",
+        "cart.note": "El pago y la confirmación se realizan directamente por WhatsApp con atención personalizada.",
+        "modal.close": "Cerrar",
+        "toast.added": "Añadido al carrito"
+      },
+      FR: {
+        "nav.inicio": "Accueil",
+        "nav.perfumes": "Parfums",
+        "nav.bolsos": "Sacs",
+        "nav.quiz": "Quiz",
+        "nav.guias": "Guides",
+        "header.carrito": "Panier",
+        "hero.slogan": "Élégance et Parfums",
+        "hero.title": "Le parfum qui vous définit.",
+        "hero.desc": "Parfums et sacs à main sélectionnés avec soin. Livraison dans toute l'Europe.",
+        "hero.btnQuiz": "Trouver votre parfum",
+        "collections.eyebrow": "Maison Hermance",
+        "collections.title": "Deux univers",
+        "collections.perfumes": "Parfums",
+        "collections.bolsos": "Sacs",
+        "collections.descubrir": "Découvrir →",
+        "quiz.eyebrow": "Diagnostic Sur Mesure",
+        "quiz.title": "Votre parfum en 5 questions.",
+        "quiz.desc": "Occasion, style et budget. Recevez 3 recommandations par email.",
+        "quiz.btnStart": "Commencer le quiz",
+        "quiz.back": "Retour",
+        "quiz.resultsTitle": "Vos recommandations",
+        "quiz.recsSubtitle": "3 créations sélectionnées pour vous",
+        "quiz.emailPlaceholder": "Votre email",
+        "quiz.btnReceive": "Recevoir",
+        "quiz.confirmMsg": "Recommandations envoyées avec succès ! Vérifiez votre boîte mail.",
+        "quiz.restart": "Recommencer le quiz",
+        "favorites.eyebrow": "Sélection Exclusive",
+        "favorites.title": "Nos favoris",
+        "filter.todos": "Tous",
+        "filter.perfumes": "Parfums",
+        "filter.bolsos": "Sacs",
+        "btn.add": "Ajouter au panier",
+        "reviews.eyebrow": "Témoignages Réels",
+        "reviews.title": "Avis de nos clients",
+        "guides.eyebrow": "Conseils Éditoriaux",
+        "guides.title": "Guides pour bien choisir",
+        "guides.g1Title": "Comment choisir son parfum",
+        "guides.g2Title": "Idées cadeaux",
+        "guides.g3Title": "Comment choisir son sac",
+        "guides.readLink": "Lire le guide →",
+        "tiktok.eyebrow": "Communauté Maison Hermance",
+        "tiktok.title": "Suivez-nous sur TikTok",
+        "tiktok.btnFollow": "Suivre",
+        "footer.newsletterTitle": "Recevez nos nouveautés",
+        "footer.newsletterDesc": "Éditions limitées, notes olfactives et lancements exclusifs.",
+        "footer.emailPlaceholder": "Votre email",
+        "footer.btnSubscribe": "M'inscrire",
+        "footer.subConfirmation": "Merci ! Votre inscription est bien confirmée.",
+        "footer.colTienda": "Boutique",
+        "footer.linkPerfumes": "Parfums",
+        "footer.linkBolsos": "Sacs",
+        "footer.linkCofres": "Coffrets cadeaux",
+        "footer.linkQuiz": "Quiz",
+        "footer.colAyuda": "Aide",
+        "footer.linkEnvios": "Livraisons",
+        "footer.linkDevoluciones": "Retours",
+        "footer.linkFaq": "Foire aux questions",
+        "footer.linkContacto": "Contact",
+        "footer.colLegal": "Légal",
+        "footer.linkAviso": "Mentions légales",
+        "footer.linkPrivacidad": "Confidentialité",
+        "footer.linkCookies": "Cookies",
+        "footer.linkTerminos": "Conditions générales",
+        "footer.colContacto": "Contact",
+        "footer.copyright": "© 2026 Maison Hermance. Tous droits réservés.",
+        "cart.title": "Votre Panier",
+        "cart.empty": "Votre panier est vide",
+        "cart.subtotal": "Sous-total :",
+        "cart.total": "Total :",
+        "cart.btnCheckout": "Commander via WhatsApp",
+        "cart.note": "Le paiement et la validation s'effectuent sur WhatsApp avec un conseiller dédié.",
+        "modal.close": "Fermer",
+        "toast.added": "Ajouté au panier"
+      },
+      EN: {
+        "nav.inicio": "Home",
+        "nav.perfumes": "Perfumes",
+        "nav.bolsos": "Handbags",
+        "nav.quiz": "Quiz",
+        "nav.guias": "Guides",
+        "header.carrito": "Cart",
+        "hero.slogan": "Elegance and Fragrances",
+        "hero.title": "The perfume that defines you.",
+        "hero.desc": "Carefully curated perfumes and handbags. Shipping across Europe.",
+        "hero.btnQuiz": "Find your perfume",
+        "collections.eyebrow": "Maison Hermance",
+        "collections.title": "Two universes",
+        "collections.perfumes": "Perfumes",
+        "collections.bolsos": "Handbags",
+        "collections.descubrir": "Discover →",
+        "quiz.eyebrow": "Personal Diagnostic",
+        "quiz.title": "Your perfume in 5 questions.",
+        "quiz.desc": "Occasion, style and budget. Receive 3 recommendations by email.",
+        "quiz.btnStart": "Start the quiz",
+        "quiz.back": "Back",
+        "quiz.resultsTitle": "Your recommendations",
+        "quiz.recsSubtitle": "3 fragrances selected for you",
+        "quiz.emailPlaceholder": "Your email",
+        "quiz.btnReceive": "Receive",
+        "quiz.confirmMsg": "Recommendations sent successfully! Check your inbox.",
+        "quiz.restart": "Retake quiz",
+        "favorites.eyebrow": "Exclusive Selection",
+        "favorites.title": "Our favorites",
+        "filter.todos": "All",
+        "filter.perfumes": "Perfumes",
+        "filter.bolsos": "Handbags",
+        "btn.add": "Add to cart",
+        "reviews.eyebrow": "Client Stories",
+        "reviews.title": "Customer Reviews",
+        "guides.eyebrow": "Editorial Advice",
+        "guides.title": "Curated Guides",
+        "guides.g1Title": "How to choose your perfume",
+        "guides.g2Title": "Gift inspirations",
+        "guides.g3Title": "How to choose your handbag",
+        "guides.readLink": "Read guide →",
+        "tiktok.eyebrow": "Maison Hermance Community",
+        "tiktok.title": "Follow us on TikTok",
+        "tiktok.btnFollow": "Follow",
+        "footer.newsletterTitle": "Receive our novelties",
+        "footer.newsletterDesc": "Limited editions, olfactory notes and exclusive releases.",
+        "footer.emailPlaceholder": "Your email",
+        "footer.btnSubscribe": "Subscribe",
+        "footer.subConfirmation": "Thank you for subscribing! Welcome email on its way.",
+        "footer.colTienda": "Shop",
+        "footer.linkPerfumes": "Perfumes",
+        "footer.linkBolsos": "Handbags",
+        "footer.linkCofres": "Gift sets",
+        "footer.linkQuiz": "Quiz",
+        "footer.colAyuda": "Help",
+        "footer.linkEnvios": "Shipping & delivery",
+        "footer.linkDevoluciones": "Returns",
+        "footer.linkFaq": "FAQ",
+        "footer.linkContacto": "Contact",
+        "footer.colLegal": "Legal",
+        "footer.linkAviso": "Legal notice",
+        "footer.linkPrivacidad": "Privacy policy",
+        "footer.linkCookies": "Cookies policy",
+        "footer.linkTerminos": "Terms & conditions",
+        "footer.colContacto": "Contact",
+        "footer.copyright": "© 2026 Maison Hermance. All rights reserved.",
+        "cart.title": "Your Cart",
+        "cart.empty": "Your cart is empty",
+        "cart.subtotal": "Subtotal:",
+        "cart.total": "Total:",
+        "cart.btnCheckout": "Checkout via WhatsApp",
+        "cart.note": "Payment and order completion are handled directly via WhatsApp with tailored support.",
+        "modal.close": "Close",
+        "toast.added": "Added to cart"
+      }
+    };
+
+    let currentLang = "ES";
+
+    function setLanguage(lang) {
+      if (!TRANSLATIONS[lang]) return;
+      currentLang = lang;
+
+      // Update lang buttons
+      document.querySelectorAll(".lang-btn").forEach(btn => {
+        btn.classList.toggle("active", btn.dataset.lang === lang);
+      });
+
+      // Update text nodes
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (TRANSLATIONS[lang][key]) {
+          el.textContent = TRANSLATIONS[lang][key];
+        }
+      });
+
+      // Update attributes (placeholders, etc.)
+      document.querySelectorAll("[data-i18n-attr]").forEach(el => {
+        const spec = el.getAttribute("data-i18n-attr");
+        const [attr, key] = spec.split(":");
+        if (attr && key && TRANSLATIONS[lang][key]) {
+          el.setAttribute(attr, TRANSLATIONS[lang][key]);
+        }
+      });
+    }
+
+    /* ==========================================================
+       3. GESTION DU PANIER (EN MÉMOIRE VANILLA)
+       ========================================================== */
+    let cart = [
+      { productId: "noir-elegance", quantity: 1 }
+    ];
+
+    function getCartCount() {
+      return cart.reduce((sum, item) => sum + item.quantity, 0);
+    }
+
+    function getCartSubtotal() {
+      return cart.reduce((sum, item) => {
+        const prod = PRODUCTS.find(p => p.id === item.productId);
+        return sum + (prod ? prod.price * item.quantity : 0);
+      }, 0);
+    }
+
+    function formatCurrency(val) {
+      return val.toFixed(2).replace(".", ",") + " €";
+    }
+
+    function renderCart() {
+      const countEl = document.getElementById("cartCount");
+      const listEl = document.getElementById("cartItemsList");
+      const subtotalEl = document.getElementById("cartSubtotal");
+      const totalEl = document.getElementById("cartTotal");
+
+      const count = getCartCount();
+      countEl.textContent = count;
+
+      if (cart.length === 0) {
+        listEl.innerHTML = `
+          <div class="cart-empty-state">
+            <p>${TRANSLATIONS[currentLang]["cart.empty"]}</p>
+          </div>
+        `;
+        subtotalEl.textContent = "0,00 €";
+        totalEl.textContent = "0,00 €";
+        return;
+      }
+
+      listEl.innerHTML = cart.map(item => {
+        const product = PRODUCTS.find(p => p.id === item.productId);
+        if (!product) return "";
+        const itemTotal = product.price * item.quantity;
+        return `
+          <div class="cart-item-row" data-id="${product.id}">
+            <div class="cart-item-thumb">
+              <img src="${product.image}" alt="${product.name}" onerror="this.onerror=null; this.classList.add('img-fallback')">
+            </div>
+            <div class="cart-item-info">
+              <h5>${product.name}</h5>
+              <div class="cart-item-price">${formatCurrency(itemTotal)}</div>
+            </div>
+            <div class="cart-qty-ctrls">
+              <button class="qty-btn" onclick="updateCartQty('${product.id}', ${item.quantity - 1})">-</button>
+              <span class="qty-value">${item.quantity}</span>
+              <button class="qty-btn" onclick="updateCartQty('${product.id}', ${item.quantity + 1})">+</button>
+            </div>
+            <button class="cart-remove-item" onclick="removeFromCart('${product.id}')" aria-label="Eliminar producto">&times;</button>
+          </div>
+        `;
+      }).join("");
+
+      const subtotal = getCartSubtotal();
+      subtotalEl.textContent = formatCurrency(subtotal);
+      totalEl.textContent = formatCurrency(subtotal);
+    }
+
+    function addToCart(productId) {
+      const existing = cart.find(item => item.productId === productId);
+      if (existing) {
+        existing.quantity += 1;
+      } else {
+        cart.push({ productId, quantity: 1 });
+      }
+
+      renderCart();
+      showToast(TRANSLATIONS[currentLang]["toast.added"]);
+
+      // Cart bounce animation
+      const cartBtn = document.getElementById("openCartBtn");
+      cartBtn.classList.add("bounce");
+      setTimeout(() => cartBtn.classList.remove("bounce"), 400);
+    }
+
+    function updateCartQty(productId, newQty) {
+      if (newQty <= 0) {
+        removeFromCart(productId);
+        return;
+      }
+      const item = cart.find(it => it.productId === productId);
+      if (item) {
+        item.quantity = newQty;
+        renderCart();
+      }
+    }
+
+    function removeFromCart(productId) {
+      cart = cart.filter(it => it.productId !== productId);
+      renderCart();
+    }
+
+    function showToast(text) {
+      const toast = document.getElementById("toastNotification");
+      const toastText = document.getElementById("toastText");
+      toastText.textContent = text;
+      toast.classList.add("active");
+      setTimeout(() => toast.classList.remove("active"), 2200);
+    }
+
+    function openCart() {
+      document.getElementById("cartDrawer").classList.add("active");
+      document.getElementById("cartOverlay").classList.add("active");
+    }
+
+    function closeCart() {
+      document.getElementById("cartDrawer").classList.remove("active");
+      document.getElementById("cartOverlay").classList.remove("active");
+    }
+
+    // Checkout via WhatsApp
+    function checkoutWhatsApp() {
+      if (cart.length === 0) {
+        alert(TRANSLATIONS[currentLang]["cart.empty"]);
+        return;
+      }
+
+      let summary = "¡Hola Maison Hermance! Deseo realizar el siguiente pedido:\n\n";
+      cart.forEach((it, idx) => {
+        const prod = PRODUCTS.find(p => p.id === it.productId);
+        if (prod) {
+          summary += `${idx + 1}. ${prod.name} x ${it.quantity} = ${formatCurrency(prod.price * it.quantity)}\n`;
+        }
+      });
+      summary += `\nTotal: ${formatCurrency(getCartSubtotal())}\n\nEnvío a Europa. ¿Podrían confirmarme la disponibilidad?`;
+
+      const cleanPhone = WHATSAPP_NUMBER.replace(/\+/g, "");
+      const waUrl = `https://wa.me/${cleanPhone}?text=${encodeURIComponent(summary)}`;
+      window.open(waUrl, "_blank");
+    }
+
+    /* ==========================================================
+       4. RENDU DES PRODUITS & FILTRES
+       ========================================================== */
+    function renderProducts(filter = "all") {
+      const grid = document.getElementById("productsGrid");
+      const filtered = filter === "all" ? PRODUCTS : PRODUCTS.filter(p => p.category === filter);
+
+      grid.innerHTML = filtered.map(p => {
+        return `
+          <article class="product-card" onclick="openQuickView('${p.id}')" data-id="${p.id}">
+            <div class="product-photo-arch">
+              <img src="${p.image}" alt="${p.name}" onerror="this.onerror=null; this.classList.add('img-fallback')">
+              ${p.badge ? `<span class="product-badge-corner ${p.badge === 'Novedad' ? 'terracotta' : ''}">${p.badge}</span>` : ""}
+              ${p.discountBadge ? `<span class="product-discount-pill">${p.discountBadge}</span>` : ""}
+            </div>
+            <div class="product-details">
+              <div>
+                <div class="product-reviews-row">
+                  <span class="stars-terracotta">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                  <span class="product-reviews-count">(${p.reviewsCount} opiniones)</span>
+                </div>
+                <h3 class="product-name font-serif">${p.name}</h3>
+              </div>
+              <div>
+                <div class="product-pricing-row">
+                  ${p.originalPrice ? `<span class="old-price">${formatCurrency(p.originalPrice)}</span>` : ""}
+                  <span class="current-price ${p.originalPrice ? 'sale' : ''}">${formatCurrency(p.price)}</span>
+                </div>
+                <button class="btn-add-cart" onclick="event.stopPropagation(); addToCart('${p.id}')">
+                  ${TRANSLATIONS[currentLang]["btn.add"]}
+                </button>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join("");
+    }
+
+    /* ==========================================================
+       5. QUIZ OLFACTIF INTERACTIF EN 5 QUESTIONS
+       ========================================================== */
+    let currentQuizStep = 0;
+    const quizAnswers = {};
+
+    function renderQuizStep(index) {
+      const q = QUIZ_QUESTIONS[index];
+      const indicator = document.getElementById("quizStepIndicator");
+      const progressBar = document.getElementById("quizProgressBar");
+      const title = document.getElementById("quizQuestionTitle");
+      const desc = document.getElementById("quizQuestionDesc");
+      const list = document.getElementById("quizOptionsList");
+      const backBtn = document.getElementById("quizBackBtn");
+
+      indicator.textContent = `Pregunta ${q.id} / ${QUIZ_QUESTIONS.length}`;
+      progressBar.style.width = `${(q.id / QUIZ_QUESTIONS.length) * 100}%`;
+      title.textContent = q.title;
+      desc.textContent = q.desc;
+
+      list.innerHTML = q.options.map(opt => `
+        <button class="quiz-option-btn" onclick="selectQuizAnswer('${q.key}', '${opt.value}')">
+          <span>${opt.label}</span>
+          <span>&rarr;</span>
+        </button>
+      `).join("");
+
+      backBtn.style.visibility = index > 0 ? "visible" : "hidden";
+    }
+
+    function selectQuizAnswer(key, val) {
+      quizAnswers[key] = val;
+      if (currentQuizStep < QUIZ_QUESTIONS.length - 1) {
+        currentQuizStep++;
+        renderQuizStep(currentQuizStep);
+      } else {
+        showQuizResults();
+      }
+    }
+
+    function showQuizResults() {
+      document.getElementById("quizStepper").style.display = "none";
+      const resultsContainer = document.getElementById("quizResults");
+      resultsContainer.classList.add("active");
+
+      // Calcul du score basé sur les tags
+      const scoredProducts = PRODUCTS.filter(p => p.category === "perfumes").map(p => {
+        let score = 0;
+        if (p.tags.occasion === quizAnswers.occasion) score += 3;
+        if (p.tags.familia === quizAnswers.familia) score += 4;
+        if (p.tags.intensidad === quizAnswers.intensidad) score += 3;
+        if (p.tags.presupuesto === quizAnswers.presupuesto) score += 2;
+        if (p.tags.estilo === quizAnswers.estilo) score += 2;
+        return { product: p, score };
+      });
+
+      scoredProducts.sort((a, b) => b.score - a.score);
+      const top3 = scoredProducts.slice(0, 3).map(item => item.product);
+
+      const recsList = document.getElementById("quizRecsList");
+      recsList.innerHTML = top3.map(p => `
+        <div class="quiz-rec-item">
+          <div class="quiz-rec-thumb">
+            <img src="${p.image}" alt="${p.name}" onerror="this.onerror=null; this.classList.add('img-fallback')">
+          </div>
+          <div class="quiz-rec-meta">
+            <h5>${p.name}</h5>
+            <span>${formatCurrency(p.price)}</span>
+          </div>
+          <button class="btn btn-newsletter" style="padding: 0.4rem 0.9rem; font-size: 0.76rem;" onclick="addToCart('${p.id}')">
+            + Añadir
+          </button>
+        </div>
+      `).join("");
+    }
+
+    function resetQuiz() {
+      currentQuizStep = 0;
+      Object.keys(quizAnswers).forEach(k => delete quizAnswers[k]);
+      document.getElementById("quizStepper").style.display = "block";
+      document.getElementById("quizResults").classList.remove("active");
+      document.getElementById("quizConfirmMsg").style.display = "none";
+      document.getElementById("quizEmailInput").value = "";
+      renderQuizStep(0);
+    }
+
+    /* ==========================================================
+       6. CARROUSEL DES AVIS CLIENTS
+       ========================================================== */
+    let currentReviewIndex = 0;
+    let reviewInterval = null;
+
+    function renderReviews() {
+      const track = document.getElementById("reviewsTrack");
+      const dots = document.getElementById("reviewDots");
+
+      track.innerHTML = REVIEWS.map(r => `
+        <div class="review-card">
+          <div>
+            <span class="stars-terracotta">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <p class="review-quote">${r.text}</p>
+          </div>
+          <div class="review-author">
+            <div class="author-avatar">
+              <img src="${r.avatar}" alt="${r.name}" onerror="this.onerror=null; this.classList.add('img-fallback')">
+            </div>
+            <div class="author-meta">
+              <h5>${r.name}, ${r.city}</h5>
+              <span>Compra verificada</span>
+            </div>
+          </div>
+        </div>
+      `).join("");
+
+      dots.innerHTML = REVIEWS.map((_, idx) => `
+        <button class="carousel-dot ${idx === 0 ? 'active' : ''}" onclick="goToReview(${idx})" aria-label="Ir a opinión ${idx + 1}"></button>
+      `).join("");
+
+      startReviewAutoplay();
+    }
+
+    function updateCarouselPosition() {
+      const track = document.getElementById("reviewsTrack");
+      const isMobile = window.innerWidth <= 768;
+      const isTablet = window.innerWidth <= 1024 && !isMobile;
+      
+      let stepPercent = 33.333;
+      if (isMobile) stepPercent = 100;
+      else if (isTablet) stepPercent = 50;
+
+      track.style.transform = `translateX(-${currentReviewIndex * stepPercent}%)`;
+
+      document.querySelectorAll(".carousel-dot").forEach((dot, idx) => {
+        dot.classList.toggle("active", idx === currentReviewIndex);
+      });
+    }
+
+    function goToReview(idx) {
+      currentReviewIndex = idx;
+      updateCarouselPosition();
+    }
+
+    function nextReview() {
+      currentReviewIndex = (currentReviewIndex + 1) % REVIEWS.length;
+      updateCarouselPosition();
+    }
+
+    function prevReview() {
+      currentReviewIndex = (currentReviewIndex - 1 + REVIEWS.length) % REVIEWS.length;
+      updateCarouselPosition();
+    }
+
+    function startReviewAutoplay() {
+      stopReviewAutoplay();
+      reviewInterval = setInterval(nextReview, 6000);
+    }
+
+    function stopReviewAutoplay() {
+      if (reviewInterval) clearInterval(reviewInterval);
+    }
+
+    /* ==========================================================
+       7. MODALES (QUICK VIEW & GUIDES)
+       ========================================================== */
+    function openQuickView(productId) {
+      const p = PRODUCTS.find(it => it.id === productId);
+      if (!p) return;
+
+      document.getElementById("quickViewImg").src = p.image;
+      document.getElementById("quickViewTitle").textContent = p.name;
+      document.getElementById("quickViewPrice").textContent = formatCurrency(p.price);
+      document.getElementById("quickViewDesc").textContent = p.description;
+      document.getElementById("quickViewReviewsCount").textContent = `(${p.reviewsCount} opiniones)`;
+
+      const addBtn = document.getElementById("quickViewAddBtn");
+      addBtn.onclick = () => {
+        addToCart(p.id);
+        closeQuickView();
+      };
+
+      document.getElementById("quickViewModal").classList.add("active");
+    }
+
+    function closeQuickView() {
+      document.getElementById("quickViewModal").classList.remove("active");
+    }
+
+    function openGuideModal(guideId) {
+      const data = GUIDES_CONTENT[guideId];
+      if (!data) return;
+
+      document.getElementById("guideModalTitle").textContent = data.title;
+      document.getElementById("guideModalBody").innerHTML = data.body;
+      document.getElementById("guideModal").classList.add("active");
+    }
+
+    function closeGuideModal() {
+      document.getElementById("guideModal").classList.remove("active");
+    }
+
+    /* ==========================================================
+       8. INITIALISATION & LISTENERS
+       ========================================================== */
+    document.addEventListener("DOMContentLoaded", () => {
+      // Inject images from IMAGES constant
+      document.getElementById("heroMainImg").src = IMAGES.hero;
+      document.getElementById("heroMiniBag").src = IMAGES.heroBagMini;
+      document.getElementById("heroFloatingThumb").src = IMAGES.heroFloatingThumb;
+      document.getElementById("colPerfumesImg").src = IMAGES.collectionPerfumes;
+      document.getElementById("colBolsosImg").src = IMAGES.collectionBolsos;
+      document.getElementById("guideImg1").src = IMAGES.guideSpray;
+      document.getElementById("guideImg2").src = IMAGES.guideGift;
+      document.getElementById("guideImg3").src = IMAGES.guideBag;
+      document.getElementById("tiktokImg1").src = IMAGES.tiktok1;
+      document.getElementById("tiktokImg2").src = IMAGES.tiktok2;
+      document.getElementById("tiktokImg3").src = IMAGES.tiktok3;
+      document.getElementById("tiktokImg4").src = IMAGES.tiktok4;
+
+      // WhatsApp & TikTok Links
+      const cleanWa = WHATSAPP_NUMBER.replace(/\+/g, "");
+      const waDirectUrl = `https://wa.me/${cleanWa}?text=Hola%20Maison%20Hermance`;
+
+      document.getElementById("heroWhatsAppLink").href = waDirectUrl;
+      document.getElementById("heroTikTokLink").href = TIKTOK_URL;
+      document.getElementById("floatingWhatsAppBtn").href = waDirectUrl;
+      document.getElementById("footerWhatsApp").href = waDirectUrl;
+      document.getElementById("footerTikTok").href = TIKTOK_URL;
+      document.getElementById("tiktokFollowBtn").href = TIKTOK_URL;
+      document.querySelectorAll(".tiktok-link").forEach(a => a.href = TIKTOK_URL);
+
+      // Render components
+      renderProducts();
+      renderCart();
+      renderQuizStep(0);
+      renderReviews();
+
+      // Language Switchers
+      document.querySelectorAll(".lang-btn").forEach(btn => {
+        btn.addEventListener("click", () => setLanguage(btn.dataset.lang));
+      });
+
+      // Filter Buttons
+      document.querySelectorAll(".filter-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+          renderProducts(btn.dataset.filter);
+        });
+      });
+
+      // Cart open / close
+      document.getElementById("openCartBtn").addEventListener("click", openCart);
+      document.getElementById("closeCartBtn").addEventListener("click", closeCart);
+      document.getElementById("cartOverlay").addEventListener("click", closeCart);
+      document.getElementById("whatsappCheckoutBtn").addEventListener("click", checkoutWhatsApp);
+
+      // Quick View & Guide Modal close
+      document.getElementById("closeQuickViewBtn").addEventListener("click", closeQuickView);
+      document.getElementById("closeGuideModalBtn").addEventListener("click", closeGuideModal);
+      document.getElementById("guideModalCloseAction").addEventListener("click", closeGuideModal);
+
+      // Guide Cards Click
+      document.querySelectorAll(".guide-card").forEach(card => {
+        card.addEventListener("click", () => openGuideModal(card.dataset.guideId));
+      });
+
+      // Quiz Nav
+      document.getElementById("startQuizBtn").addEventListener("click", () => {
+        document.getElementById("quizCard").scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+      document.getElementById("heroQuizBtn").addEventListener("click", () => {
+        document.getElementById("quizCard").scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+      document.getElementById("quizBackBtn").addEventListener("click", () => {
+        if (currentQuizStep > 0) {
+          currentQuizStep--;
+          renderQuizStep(currentQuizStep);
+        }
+      });
+      document.getElementById("quizRestartBtn").addEventListener("click", resetQuiz);
+      document.getElementById("quizEmailForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const email = document.getElementById("quizEmailInput").value;
+        if (email) {
+          document.getElementById("quizConfirmMsg").style.display = "block";
+        }
+      });
+
+      // Reviews Carousel
+      document.getElementById("reviewPrevBtn").addEventListener("click", prevReview);
+      document.getElementById("reviewNextBtn").addEventListener("click", nextReview);
+      const reviewsCarousel = document.getElementById("reviewsCarousel");
+      reviewsCarousel.addEventListener("mouseenter", stopReviewAutoplay);
+      reviewsCarousel.addEventListener("mouseleave", startReviewAutoplay);
+
+      // Touch swipe support for reviews
+      let touchStartX = 0;
+      reviewsCarousel.addEventListener("touchstart", (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+      reviewsCarousel.addEventListener("touchend", (e) => {
+        const touchEndX = e.changedTouches[0].screenX;
+        if (touchStartX - touchEndX > 40) nextReview();
+        else if (touchEndX - touchStartX > 40) prevReview();
+      }, { passive: true });
+
+      // Newsletter form
+      document.getElementById("newsletterForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const input = document.getElementById("newsletterInput");
+        if (input.value) {
+          document.getElementById("newsletterFeedback").style.display = "block";
+          input.value = "";
+        }
+      });
+
+      // Mobile Menu
+      const burgerBtn = document.getElementById("burgerBtn");
+      const mobileNav = document.getElementById("mobileNav");
+      burgerBtn.addEventListener("click", () => {
+        const isOpen = burgerBtn.classList.toggle("active");
+        mobileNav.classList.toggle("open", isOpen);
+        burgerBtn.setAttribute("aria-expanded", isOpen);
+      });
+      document.querySelectorAll(".mobile-nav-link").forEach(link => {
+        link.addEventListener("click", () => {
+          burgerBtn.classList.remove("active");
+          mobileNav.classList.remove("open");
+          burgerBtn.setAttribute("aria-expanded", "false");
+        });
+      });
+
+      // Scroll to Top
+      const scrollTopBtn = document.getElementById("scrollTopBtn");
+      scrollTopBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+
+      // Header Scroll & Reveal Animations
+      const siteHeader = document.getElementById("siteHeader");
+      const reveals = document.querySelectorAll(".reveal-on-scroll");
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("revealed");
+          }
+        });
+      }, { threshold: 0.1 });
+
+      reveals.forEach(el => observer.observe(el));
+
+      window.addEventListener("scroll", () => {
+        const scrollY = window.scrollY;
+        siteHeader.classList.toggle("scrolled", scrollY > 80);
+        scrollTopBtn.classList.toggle("visible", scrollY > 600);
+
+        // Update active menu link
+        const sections = ["inicio", "perfumes", "bolsos", "quiz", "guias"];
+        sections.forEach(id => {
+          const el = document.getElementById(id);
+          if (el) {
+            const rect = el.getBoundingClientRect();
+            if (rect.top <= 120 && rect.bottom >= 120) {
+              document.querySelectorAll(".nav-link").forEach(link => {
+                link.classList.toggle("active", link.getAttribute("href") === `#${id}`);
+              });
+            }
+          }
+        });
+      }, { passive: true });
+
+      // Close modal on Escape
+      window.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          closeCart();
+          closeQuickView();
+          closeGuideModal();
+        }
+      });
+
+      // Close modal on click outside
+      document.getElementById("quickViewModal").addEventListener("click", (e) => {
+        if (e.target.id === "quickViewModal") closeQuickView();
+      });
+      document.getElementById("guideModal").addEventListener("click", (e) => {
+        if (e.target.id === "guideModal") closeGuideModal();
+      });
+    });
+  </script>
+</body>
+</html>
